@@ -1,0 +1,318 @@
+/* ==========================================================================
+   HERA LABS — Journey Section
+   Phase 08: Journey Timeline
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Section Layout
+   -------------------------------------------------------------------------- */
+
+.section--contact {
+  padding-block: var(--space-10) var(--space-9);
+  border-top: 1px solid rgba(43, 43, 43, 0.4);
+}
+
+.journey__header {
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: var(--space-9);
+  text-align: center;
+}
+
+.journey__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.journey__title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.journey__intro {
+  font-size: clamp(var(--font-size-base), 1.5vw, var(--font-size-lg));
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 52ch;
+  margin-inline: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Timeline
+   -------------------------------------------------------------------------- */
+
+.journey__timeline {
+  position: relative;
+  max-width: 820px;
+  margin-inline: auto;
+  list-style: none;
+}
+
+.journey__timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: var(--color-border);
+  transform: translateX(-50%);
+}
+
+.journey__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-5);
+  padding-bottom: var(--space-7);
+}
+
+.journey__item:last-child {
+  padding-bottom: 0;
+}
+
+.journey__marker {
+  grid-column: 2;
+  grid-row: 1;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  z-index: 1;
+  transition: border-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.journey__item--heros .journey__marker {
+  border-color: #7FA88E;
+}
+
+.journey__item--esref .journey__marker {
+  border-color: #C4AD78;
+}
+
+.journey__item--korteks .journey__marker {
+  border-color: #7A9BB8;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Timeline Cards
+   -------------------------------------------------------------------------- */
+
+.journey-card {
+  --journey-accent: var(--color-accent);
+  --journey-accent-muted: rgba(216, 216, 216, 0.1);
+
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.journey-card:hover {
+  transform: translate3d(0, -2px, 0);
+  border-color: var(--journey-accent);
+}
+
+.journey-card__year {
+  display: block;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--color-text-primary);
+  opacity: 0.35;
+  margin-bottom: var(--space-4);
+}
+
+.journey-card__product {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.journey-card__category {
+  display: inline-block;
+  margin-bottom: var(--space-4);
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--journey-accent);
+  background-color: var(--journey-accent-muted);
+  border-radius: var(--radius-sm);
+}
+
+.journey-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.journey-card__description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* Product accents */
+.journey__item--heros .journey-card {
+  --journey-accent: #7FA88E;
+  --journey-accent-muted: rgba(127, 168, 142, 0.12);
+}
+
+.journey__item--esref .journey-card {
+  --journey-accent: #C4AD78;
+  --journey-accent-muted: rgba(196, 173, 120, 0.12);
+}
+
+.journey__item--korteks .journey-card {
+  --journey-accent: #7A9BB8;
+  --journey-accent-muted: rgba(122, 155, 184, 0.12);
+}
+
+.journey__item--future .journey-card {
+  --journey-accent: var(--color-accent);
+  --journey-accent-muted: rgba(216, 216, 216, 0.08);
+}
+
+/* Alternating layout */
+.journey__item:nth-child(odd) .journey-card {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+}
+
+.journey__item:nth-child(odd) .journey-card__category {
+  margin-left: auto;
+}
+
+.journey__item:nth-child(even) .journey-card {
+  grid-column: 3;
+  grid-row: 1;
+  text-align: left;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Scroll Reveal Stagger
+   -------------------------------------------------------------------------- */
+
+.journey__eyebrow.motion-reveal {
+  transition-delay: 0ms;
+}
+
+.journey__title.motion-reveal {
+  transition-delay: 80ms;
+}
+
+.journey__intro.motion-reveal {
+  transition-delay: 160ms;
+}
+
+.journey__item:nth-child(1) .journey-card.motion-reveal {
+  transition-delay: 240ms;
+}
+
+.journey__item:nth-child(2) .journey-card.motion-reveal {
+  transition-delay: 320ms;
+}
+
+.journey__item:nth-child(3) .journey-card.motion-reveal {
+  transition-delay: 400ms;
+}
+
+.journey__item:nth-child(4) .journey-card.motion-reveal {
+  transition-delay: 480ms;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .section--contact {
+    padding-block: var(--space-9) var(--space-8);
+  }
+
+  .journey__header {
+    margin-bottom: var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .journey__header {
+    text-align: left;
+    margin-bottom: var(--space-7);
+  }
+
+  .journey__intro {
+    margin-inline: 0;
+  }
+
+  .journey__timeline::before {
+    left: 4px;
+    transform: none;
+  }
+
+  .journey__item {
+    grid-template-columns: auto 1fr;
+    gap: var(--space-4);
+    padding-bottom: var(--space-6);
+  }
+
+  .journey__marker {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    margin-top: var(--space-6);
+  }
+
+  .journey__item:nth-child(odd) .journey-card,
+  .journey__item:nth-child(even) .journey-card {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+  }
+
+  .journey__item:nth-child(odd) .journey-card__category {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section--contact {
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  .journey-card {
+    padding: var(--space-4) var(--space-5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-card:hover {
+    transform: none;
+  }
+}

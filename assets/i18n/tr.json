@@ -161,10 +161,44 @@
       "subtitle": "Yazılım Stüdyosu"
     }
   },
+  "journey": {
+    "sectionLabel": "Yolculuk",
+    "eyebrow": "YOLCULUK",
+    "title": {
+      "line1": "Her seferinde",
+      "line2": "bir ürün inşa ediyoruz."
+    },
+    "intro": "Her ürün, özenle tasarlanmış dijital deneyimler inşa etme yolculuğumuzda atılmış bir adımdır.",
+    "items": {
+      "heros": {
+        "year": "2025",
+        "name": "Heros",
+        "category": "Topluluk",
+        "description": "Kayıp ve sahiplendirilmeye açık evcil hayvanların aileleriyle yeniden buluşmasına yardımcı olan bir platform."
+      },
+      "esref": {
+        "year": "2026",
+        "name": "Eşref Saati",
+        "category": "Yaşam Tarzı",
+        "description": "İnsanların gün boyunca anlamlı anları keşfetmesine yardımcı olan sakin bir dijital deneyim."
+      },
+      "korteks": {
+        "year": "2026",
+        "name": "Korteks",
+        "category": "Eğitim",
+        "description": "Öğrencilerin deneme sınavlarını takip etmesine ve anlamlı içgörülerle gelişmesine yardımcı olan bir akademik platform."
+      },
+      "future": {
+        "year": "Gelecek",
+        "title": "Yolculuk devam ediyor.",
+        "description": "Özenle tasarlanmış yeni ürünler halihazırda geliştiriliyor."
+      }
+    }
+  },
   "sections": {
     "technology": "Mühendislik",
     "roadmap": "Ürün Ekosistemi",
-    "contact": "İletişim"
+    "contact": "Yolculuk"
   },
   "footer": {
     "copyright": "© Hera Labs",

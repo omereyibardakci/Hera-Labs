@@ -161,10 +161,44 @@
       "subtitle": "Software Studio"
     }
   },
+  "journey": {
+    "sectionLabel": "Journey",
+    "eyebrow": "JOURNEY",
+    "title": {
+      "line1": "Building,",
+      "line2": "one product at a time."
+    },
+    "intro": "Every product represents another step in our long-term journey — each one a carefully considered addition to the experiences we aim to create.",
+    "items": {
+      "heros": {
+        "year": "2025",
+        "name": "Heros",
+        "category": "Community",
+        "description": "A platform created to help lost and adoptable pets reconnect with families."
+      },
+      "esref": {
+        "year": "2026",
+        "name": "Eşref Saati",
+        "category": "Lifestyle",
+        "description": "A calm digital experience helping people discover meaningful moments throughout the day."
+      },
+      "korteks": {
+        "year": "2026",
+        "name": "Korteks",
+        "category": "Education",
+        "description": "An academic platform helping students track trial exams and improve with meaningful insights."
+      },
+      "future": {
+        "year": "Future",
+        "title": "The journey continues.",
+        "description": "More thoughtfully crafted products are already in development."
+      }
+    }
+  },
   "sections": {
     "technology": "Engineering",
     "roadmap": "Product Ecosystem",
-    "contact": "Contact"
+    "contact": "Journey"
   },
   "footer": {
     "copyright": "© Hera Labs",

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="assets/css/philosophy.css">
   <link rel="stylesheet" href="assets/css/engineering.css">
   <link rel="stylesheet" href="assets/css/ecosystem.css">
+  <link rel="stylesheet" href="assets/css/journey.css">
 </head>
 <body>
 
@@ -494,9 +495,61 @@
       </div>
     </section>
 
-    <section id="contact" class="section section--contact" data-i18n-aria-label="sections.contact">
+    <section id="contact" class="section section--contact" aria-labelledby="journey-heading">
       <div class="container">
-        <div class="section__placeholder motion-reveal" aria-hidden="true"></div>
+
+        <header class="journey__header">
+          <p class="journey__eyebrow motion-reveal" data-i18n="journey.eyebrow">JOURNEY</p>
+          <h2 class="journey__title motion-reveal" id="journey-heading">
+            <span data-i18n="journey.title.line1">Building,</span><br>
+            <span data-i18n="journey.title.line2">one product at a time.</span>
+          </h2>
+          <p class="journey__intro motion-reveal" data-i18n="journey.intro">Every product represents another step in our long-term journey — each one a carefully considered addition to the experiences we aim to create.</p>
+        </header>
+
+        <ol class="journey__timeline">
+
+          <li class="journey__item journey__item--heros">
+            <span class="journey__marker" aria-hidden="true"></span>
+            <article class="journey-card motion-reveal">
+              <time class="journey-card__year" datetime="2025" data-i18n="journey.items.heros.year">2025</time>
+              <h3 class="journey-card__product" data-i18n="journey.items.heros.name">Heros</h3>
+              <span class="journey-card__category" data-i18n="journey.items.heros.category">Community</span>
+              <p class="journey-card__description" data-i18n="journey.items.heros.description">A platform created to help lost and adoptable pets reconnect with families.</p>
+            </article>
+          </li>
+
+          <li class="journey__item journey__item--esref">
+            <span class="journey__marker" aria-hidden="true"></span>
+            <article class="journey-card motion-reveal">
+              <time class="journey-card__year" datetime="2026" data-i18n="journey.items.esref.year">2026</time>
+              <h3 class="journey-card__product" data-i18n="journey.items.esref.name">Eşref Saati</h3>
+              <span class="journey-card__category" data-i18n="journey.items.esref.category">Lifestyle</span>
+              <p class="journey-card__description" data-i18n="journey.items.esref.description">A calm digital experience helping people discover meaningful moments throughout the day.</p>
+            </article>
+          </li>
+
+          <li class="journey__item journey__item--korteks">
+            <span class="journey__marker" aria-hidden="true"></span>
+            <article class="journey-card motion-reveal">
+              <time class="journey-card__year" datetime="2026" data-i18n="journey.items.korteks.year">2026</time>
+              <h3 class="journey-card__product" data-i18n="journey.items.korteks.name">Korteks</h3>
+              <span class="journey-card__category" data-i18n="journey.items.korteks.category">Education</span>
+              <p class="journey-card__description" data-i18n="journey.items.korteks.description">An academic platform helping students track trial exams and improve with meaningful insights.</p>
+            </article>
+          </li>
+
+          <li class="journey__item journey__item--future">
+            <span class="journey__marker" aria-hidden="true"></span>
+            <article class="journey-card motion-reveal">
+              <p class="journey-card__year" data-i18n="journey.items.future.year">Future</p>
+              <h3 class="journey-card__title" data-i18n="journey.items.future.title">The journey continues.</h3>
+              <p class="journey-card__description" data-i18n="journey.items.future.description">More thoughtfully crafted products are already in development.</p>
+            </article>
+          </li>
+
+        </ol>
+
       </div>
     </section>
 
