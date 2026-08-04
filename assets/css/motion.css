@@ -285,7 +285,7 @@ html.motion-ready .motion-load-scroll {
 
 .btn:hover {
   transform: translate3d(0, -2px, 0);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  box-shadow: var(--shadow-medium);
 }
 
 .btn:active {
@@ -304,7 +304,7 @@ html.motion-ready .motion-load-scroll {
 .product-card:hover {
   will-change: transform;
   transform: translate3d(0, -6px, 0) rotate(0.5deg);
-  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.24);
+  box-shadow: var(--shadow-elevated);
 }
 
 .product-card:active {

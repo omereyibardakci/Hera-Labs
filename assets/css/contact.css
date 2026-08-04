@@ -10,7 +10,7 @@
 
 .section--connect {
   padding-block: var(--space-10) var(--space-9);
-  border-top: 1px solid rgba(43, 43, 43, 0.4);
+  border-top: 1px solid var(--color-divider);
 }
 
 .contact__grid {
@@ -77,7 +77,7 @@
 .contact__email-btn:hover {
   transform: translate3d(0, -2px, 0);
   border-color: var(--color-accent);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-contact-hover);
 }
 
 .contact__email-btn:focus-visible {

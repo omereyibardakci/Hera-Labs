@@ -10,7 +10,7 @@
 
 .section--roadmap {
   padding-block: var(--space-10) var(--space-9);
-  border-top: 1px solid rgba(43, 43, 43, 0.4);
+  border-top: 1px solid var(--color-divider);
 }
 
 .ecosystem__header {
@@ -98,17 +98,17 @@
 
 .ecosystem__diagram:has(.ecosystem-node--korteks:hover) .ecosystem__line--korteks,
 .ecosystem__diagram:has(.ecosystem-node--korteks:focus-visible) .ecosystem__line--korteks {
-  background-color: #7A9BB8;
+  background-color: var(--connection-line-korteks);
 }
 
 .ecosystem__diagram:has(.ecosystem-node--esref:hover) .ecosystem__line--esref,
 .ecosystem__diagram:has(.ecosystem-node--esref:focus-visible) .ecosystem__line--esref {
-  background-color: #C4AD78;
+  background-color: var(--connection-line-esref);
 }
 
 .ecosystem__diagram:has(.ecosystem-node--heros:hover) .ecosystem__line--heros,
 .ecosystem__diagram:has(.ecosystem-node--heros:focus-visible) .ecosystem__line--heros {
-  background-color: #7FA88E;
+  background-color: var(--connection-line-heros);
 }
 
 
@@ -174,7 +174,7 @@
 
 .ecosystem-node {
   --node-accent: var(--color-accent);
-  --node-accent-muted: rgba(216, 216, 216, 0.12);
+  --node-accent-muted: var(--brand-neutral-muted);
 
   position: absolute;
   display: flex;
@@ -204,8 +204,8 @@
 }
 
 .ecosystem-node--korteks {
-  --node-accent: #7A9BB8;
-  --node-accent-muted: rgba(122, 155, 184, 0.14);
+  --node-accent: var(--brand-korteks);
+  --node-accent-muted: var(--brand-korteks-muted);
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -217,15 +217,15 @@
 }
 
 .ecosystem-node--esref {
-  --node-accent: #C4AD78;
-  --node-accent-muted: rgba(196, 173, 120, 0.14);
+  --node-accent: var(--brand-esref);
+  --node-accent-muted: var(--brand-esref-muted);
   bottom: 8%;
   left: 0;
 }
 
 .ecosystem-node--heros {
-  --node-accent: #7FA88E;
-  --node-accent-muted: rgba(127, 168, 142, 0.14);
+  --node-accent: var(--brand-heros);
+  --node-accent-muted: var(--brand-heros-muted);
   bottom: 8%;
   right: 0;
 }
@@ -242,7 +242,7 @@
 
 .ecosystem-node:hover .ecosystem-node__logo,
 .ecosystem-node:focus-visible .ecosystem-node__logo {
-  border-color: color-mix(in srgb, var(--node-accent) 75%, white 25%);
+  border-color: color-mix(in srgb, var(--node-accent) 75%, var(--color-mix-light) 25%);
 }
 
 .ecosystem-node__name {

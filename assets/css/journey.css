@@ -10,7 +10,7 @@
 
 .section--contact {
   padding-block: var(--space-10) var(--space-9);
-  border-top: 1px solid rgba(43, 43, 43, 0.4);
+  border-top: 1px solid var(--color-divider);
 }
 
 .journey__header {
@@ -95,15 +95,15 @@
 }
 
 .journey__item--heros .journey__marker {
-  border-color: #7FA88E;
+  border-color: var(--timeline-marker-heros);
 }
 
 .journey__item--esref .journey__marker {
-  border-color: #C4AD78;
+  border-color: var(--timeline-marker-esref);
 }
 
 .journey__item--korteks .journey__marker {
-  border-color: #7A9BB8;
+  border-color: var(--timeline-marker-korteks);
 }
 
 
@@ -113,7 +113,7 @@
 
 .journey-card {
   --journey-accent: var(--color-accent);
-  --journey-accent-muted: rgba(216, 216, 216, 0.1);
+  --journey-accent-muted: var(--color-accent-muted);
 
   padding: var(--space-5) var(--space-6);
   background-color: var(--color-surface);
@@ -177,23 +177,23 @@
 
 /* Product accents */
 .journey__item--heros .journey-card {
-  --journey-accent: #7FA88E;
-  --journey-accent-muted: rgba(127, 168, 142, 0.12);
+  --journey-accent: var(--brand-heros);
+  --journey-accent-muted: var(--brand-heros-muted);
 }
 
 .journey__item--esref .journey-card {
-  --journey-accent: #C4AD78;
-  --journey-accent-muted: rgba(196, 173, 120, 0.12);
+  --journey-accent: var(--brand-esref);
+  --journey-accent-muted: var(--brand-esref-muted);
 }
 
 .journey__item--korteks .journey-card {
-  --journey-accent: #7A9BB8;
-  --journey-accent-muted: rgba(122, 155, 184, 0.12);
+  --journey-accent: var(--brand-korteks);
+  --journey-accent-muted: var(--brand-korteks-muted);
 }
 
 .journey__item--future .journey-card {
   --journey-accent: var(--color-accent);
-  --journey-accent-muted: rgba(216, 216, 216, 0.08);
+  --journey-accent-muted: var(--color-accent-muted-soft);
 }
 
 /* Alternating layout */

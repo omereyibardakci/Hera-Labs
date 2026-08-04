@@ -9,14 +9,7 @@
    -------------------------------------------------------------------------- */
 
 :root {
-  /* Colors */
-  --color-bg:           #090909;
-  --color-surface:      #111111;
-  --color-card:         #171717;
-  --color-border:       #2B2B2B;
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #A0A0A0;
-  --color-accent:       #D8D8D8;
+  /* Color tokens defined in theme.css via [data-theme] */
 
   /* Spacing Scale */
   --space-1:  4px;
@@ -61,25 +54,8 @@
   --transition-base:   250ms ease;
   --transition-slow:   400ms ease;
   --transition-header: 300ms ease;
-
-  /* Header */
-  --header-bg:        rgba(9, 9, 9, 0.72);
-  --header-bg-scrolled: rgba(9, 9, 9, 0.92);
   --header-blur:      12px;
-  --header-border:    rgba(43, 43, 43, 0.6);
-
-  /* Focus */
-  --focus-ring-color: var(--color-accent);
   --focus-ring-offset: 2px;
-
-  /* Selection */
-  --selection-bg:   rgba(216, 216, 216, 0.15);
-  --selection-color: var(--color-text-primary);
-
-  /* Scrollbar */
-  --scrollbar-track: var(--color-bg);
-  --scrollbar-thumb: var(--color-border);
-  --scrollbar-thumb-hover: #3a3a3a;
 }
 
 
@@ -425,10 +401,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.theme-toggle__icon--moon {
-  display: none;
 }
 
 

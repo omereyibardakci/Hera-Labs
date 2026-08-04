@@ -67,7 +67,7 @@
 
 .products-card {
   --product-accent: var(--color-accent);
-  --product-accent-muted: rgba(216, 216, 216, 0.1);
+  --product-accent-muted: var(--color-accent-muted);
   --product-surface: var(--color-card);
 
   display: flex;
@@ -89,7 +89,7 @@
   transform: translate3d(0, -4px, 0);
   border-color: var(--product-accent);
   background-color: color-mix(in srgb, var(--product-surface) 88%, var(--product-accent) 12%);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .products-card__top {
@@ -115,7 +115,7 @@
 
 .products-card:hover .products-card__logo {
   opacity: 1;
-  border-color: color-mix(in srgb, var(--product-accent) 80%, white 20%);
+  border-color: color-mix(in srgb, var(--product-accent) 80%, var(--color-mix-light) 20%);
 }
 
 .products-card__badge {
@@ -132,7 +132,7 @@
 }
 
 .products-card:hover .products-card__badge {
-  color: color-mix(in srgb, var(--product-accent) 75%, white 25%);
+  color: color-mix(in srgb, var(--product-accent) 75%, var(--color-mix-light) 25%);
 }
 
 .products-card__body {
@@ -179,9 +179,9 @@
 
 /* Korteks — structured, analytical */
 .products-card--korteks {
-  --product-accent: #7A9BB8;
-  --product-accent-muted: rgba(122, 155, 184, 0.12);
-  --product-surface: #161616;
+  --product-accent: var(--brand-korteks);
+  --product-accent-muted: var(--brand-korteks-muted);
+  --product-surface: var(--product-surface-korteks);
 }
 
 .products-card--korteks .products-card__logo {
@@ -194,9 +194,9 @@
 
 /* Eşref Saati — calm, elegant, spacious */
 .products-card--esref {
-  --product-accent: #C4AD78;
-  --product-accent-muted: rgba(196, 173, 120, 0.12);
-  --product-surface: #151515;
+  --product-accent: var(--brand-esref);
+  --product-accent-muted: var(--brand-esref-muted);
+  --product-surface: var(--product-surface-esref);
 }
 
 .products-card--esref {
@@ -213,9 +213,9 @@
 
 /* Heros — friendly, soft, community */
 .products-card--heros {
-  --product-accent: #7FA88E;
-  --product-accent-muted: rgba(127, 168, 142, 0.12);
-  --product-surface: #161816;
+  --product-accent: var(--brand-heros);
+  --product-accent-muted: var(--brand-heros-muted);
+  --product-surface: var(--product-surface-heros);
 }
 
 .products-card--heros .products-card__logo {

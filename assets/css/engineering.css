@@ -10,7 +10,7 @@
 
 .section--technology {
   padding-block: var(--space-10) var(--space-9);
-  border-top: 1px solid rgba(43, 43, 43, 0.4);
+  border-top: 1px solid var(--color-divider);
 }
 
 .engineering__header {
@@ -128,7 +128,7 @@
   height: 8px;
   border-radius: 50%;
   background-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(216, 216, 216, 0.12);
+  box-shadow: 0 0 0 3px var(--engineering-focus-glow);
 }
 
 /* Focus ring symbol */
@@ -139,7 +139,7 @@
   border-radius: 2px;
   box-shadow:
     0 0 0 2px var(--color-surface),
-    0 0 0 3px rgba(216, 216, 216, 0.35);
+    0 0 0 3px var(--engineering-focus-ring);
 }
 
 /* Grid symbol */

@@ -54,12 +54,12 @@
   background:
     radial-gradient(
       ellipse 70% 55% at 72% 42%,
-      rgba(255, 255, 255, 0.028) 0%,
+      var(--hero-glow-primary) 0%,
       transparent 68%
     ),
     radial-gradient(
       ellipse 45% 40% at 18% 68%,
-      rgba(255, 255, 255, 0.014) 0%,
+      var(--hero-glow-secondary) 0%,
       transparent 65%
     );
 }
@@ -70,14 +70,14 @@
   background: radial-gradient(
     ellipse 85% 75% at 50% 50%,
     transparent 35%,
-    rgba(0, 0, 0, 0.45) 100%
+    var(--hero-vignette) 100%
   );
 }
 
 .hero__bg-noise {
   position: absolute;
   inset: 0;
-  opacity: 0.035;
+  opacity: var(--hero-noise-opacity);
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 128px 128px;
@@ -157,7 +157,7 @@
 .btn--primary:hover {
   transform: translateY(-2px);
   border-color: var(--color-accent);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-soft);
 }
 
 .btn--secondary {
@@ -170,7 +170,7 @@
   transform: translateY(-2px);
   color: var(--color-text-primary);
   border-color: var(--color-accent);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-subtle);
 }
 
 
@@ -226,7 +226,7 @@
 
 .product-card {
   --product-accent: var(--color-accent);
-  --product-accent-muted: rgba(216, 216, 216, 0.12);
+  --product-accent-muted: var(--brand-neutral-muted);
 
   display: flex;
   align-items: center;
@@ -235,7 +235,7 @@
   background-color: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-subtle);
   transition:
     transform var(--transition-base),
     border-color var(--transition-base),
@@ -245,22 +245,22 @@
 .product-card:hover {
   transform: translateY(-3px);
   border-color: var(--product-accent);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  box-shadow: var(--shadow-elevated);
 }
 
 .product-card--korteks {
-  --product-accent: #7A9BB8;
-  --product-accent-muted: rgba(122, 155, 184, 0.14);
+  --product-accent: var(--brand-korteks);
+  --product-accent-muted: var(--brand-korteks-muted);
 }
 
 .product-card--esref {
-  --product-accent: #C4AD78;
-  --product-accent-muted: rgba(196, 173, 120, 0.14);
+  --product-accent: var(--brand-esref);
+  --product-accent-muted: var(--brand-esref-muted);
 }
 
 .product-card--heros {
-  --product-accent: #7FA88E;
-  --product-accent-muted: rgba(127, 168, 142, 0.14);
+  --product-accent: var(--brand-heros);
+  --product-accent-muted: var(--brand-heros-muted);
 }
 
 .product-card__icon {
