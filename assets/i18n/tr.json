@@ -8,7 +8,7 @@
   },
   "navigation": {
     "primary": "Ana navigasyon",
-    "about": "Felsefe",
+    "about": "Hakkında",
     "products": "Ürünler",
     "technology": "Teknoloji",
     "roadmap": "Yol Haritası",
@@ -47,7 +47,7 @@
       "learnMore": "Daha Fazla Bilgi"
     },
     "showcase": "Öne çıkan ürünler",
-    "scrollToAbout": "Felsefe bölümüne kaydır",
+    "scrollToAbout": "Hakkında bölümüne kaydır",
     "cards": {
       "korteks": {
         "name": "Korteks",
@@ -64,8 +64,8 @@
     }
   },
   "philosophy": {
-    "sectionLabel": "Felsefe",
-    "eyebrow": "FELSEFE",
+    "sectionLabel": "Hakkında",
+    "eyebrow": "HAKKINDA",
     "title": {
       "line1": "Yerini hak eden",
       "line2": "yazılımlar geliştiriyoruz."
@@ -94,6 +94,7 @@
       "line2": "ürünler."
     },
     "intro": "Geliştirdiğimiz her uygulama kalıcı olmak için tasarlanır — netlik, performans ve kullananlara saygı duyan deneyimlere odaklanır.",
+    "badge": "Özenle Tasarlandı",
     "items": {
       "korteks": {
         "name": "Korteks",
