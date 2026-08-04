@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Hera Labs",
-    "description": "Hera Labs — Carefully crafted mobile applications. Built with precision."
+    "title": "Hera Labs — Carefully Crafted Mobile Applications",
+    "description": "Hera Labs is an independent software studio building carefully crafted mobile applications focused on simplicity, performance and meaningful user experiences."
   },
   "brand": {
     "name": "HERA LABS"
@@ -23,6 +23,9 @@
   },
   "theme": {
     "toggle": "Toggle dark / light mode"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content"
   },
   "status": {
     "available": "Available",

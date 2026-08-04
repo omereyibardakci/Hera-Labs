@@ -46,6 +46,10 @@
       metaTheme.setAttribute('content', THEME_COLORS[theme]);
     }
 
+    if (toggleButton) {
+      toggleButton.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+
     if (animate) {
       root.classList.add('theme-transition');
       window.setTimeout(function () {
