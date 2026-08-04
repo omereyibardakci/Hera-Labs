@@ -1,0 +1,357 @@
+/* ==========================================================================
+   HERA LABS — Motion System
+   Phase 02B: Cinematic Motion Language
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Motion Tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+  --motion-ease-out:       cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-in-out:    cubic-bezier(0.45, 0, 0.55, 1);
+  --motion-ease-enter:     cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-soft:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --motion-duration-fast:    200ms;
+  --motion-duration-normal:  250ms;
+  --motion-duration-reveal:  700ms;
+  --motion-duration-reveal-lg: 900ms;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Reduced Motion — Global Override
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-fast:   0ms;
+    --motion-duration-normal: 0ms;
+    --motion-duration-reveal: 0ms;
+    --motion-duration-reveal-lg: 0ms;
+  }
+
+  html.motion-pending .motion-on-load,
+  html.motion-pending .motion-line__inner,
+  html.motion-pending .motion-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .motion-reveal.is-revealed {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__scroll-thumb {
+    animation: none !important;
+    opacity: 0.4;
+  }
+
+  .hero__cards-item {
+    transform: none !important;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Reusable Motion Utilities
+   -------------------------------------------------------------------------- */
+
+/* Initial hidden state before page load sequence */
+html.motion-pending .motion-on-load {
+  opacity: 0;
+}
+
+/* Fade Up */
+@keyframes motion-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+html.motion-ready .motion-on-load.motion-fade-up {
+  animation: motion-fade-up var(--motion-duration-reveal) var(--motion-ease-out) forwards;
+}
+
+/* Fade In */
+@keyframes motion-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+html.motion-ready .motion-on-load.motion-fade-in {
+  animation: motion-fade-in var(--motion-duration-reveal) var(--motion-ease-out) forwards;
+}
+
+/* Fade Down (header entrance) */
+@keyframes motion-fade-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+html.motion-ready .motion-on-load.motion-fade-down {
+  animation: motion-fade-down var(--motion-duration-reveal) var(--motion-ease-out) forwards;
+}
+
+/* Scale In */
+@keyframes motion-scale-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+html.motion-ready .motion-on-load.motion-scale-in {
+  animation: motion-scale-in var(--motion-duration-reveal) var(--motion-ease-enter) forwards;
+}
+
+/* Slide Up (subtle, for buttons) */
+@keyframes motion-slide-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+html.motion-ready .motion-on-load.motion-slide-up {
+  animation: motion-slide-up var(--motion-duration-reveal) var(--motion-ease-out) forwards;
+}
+
+/* Line reveal (H1 lines) */
+.motion-line {
+  display: block;
+  overflow: hidden;
+}
+
+html.motion-pending .motion-line__inner {
+  opacity: 0;
+  transform: translate3d(0, 110%, 0);
+}
+
+@keyframes motion-line-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 110%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+html.motion-ready .motion-line__inner {
+  animation: motion-line-reveal var(--motion-duration-reveal-lg) var(--motion-ease-enter) forwards;
+}
+
+/* Motion delay utilities */
+.motion-delay-1 { animation-delay: 80ms;  }
+.motion-delay-2 { animation-delay: 160ms; }
+.motion-delay-3 { animation-delay: 240ms; }
+.motion-delay-4 { animation-delay: 320ms; }
+.motion-delay-5 { animation-delay: 400ms; }
+.motion-delay-6 { animation-delay: 480ms; }
+.motion-delay-7 { animation-delay: 560ms; }
+.motion-delay-8 { animation-delay: 640ms; }
+.motion-delay-9 { animation-delay: 720ms; }
+.motion-delay-10 { animation-delay: 800ms; }
+.motion-delay-11 { animation-delay: 880ms; }
+.motion-delay-12 { animation-delay: 960ms; }
+.motion-delay-13 { animation-delay: 1040ms; }
+.motion-delay-14 { animation-delay: 1120ms; }
+.motion-delay-15 { animation-delay: 1200ms; }
+
+
+/* --------------------------------------------------------------------------
+   4. Scroll Reveal System
+   -------------------------------------------------------------------------- */
+
+.motion-reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity var(--motion-duration-reveal-lg) var(--motion-ease-out),
+    transform var(--motion-duration-reveal-lg) var(--motion-ease-out);
+  will-change: opacity, transform;
+}
+
+.motion-reveal.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Page Load — Hero Sequence
+   -------------------------------------------------------------------------- */
+
+html.motion-ready .motion-load-header {
+  animation-delay: 0ms;
+}
+
+html.motion-ready .motion-load-eyebrow {
+  animation-delay: 520ms;
+}
+
+html.motion-ready .motion-load-line-1 .motion-line__inner {
+  animation-delay: 680ms;
+}
+
+html.motion-ready .motion-load-line-2 .motion-line__inner {
+  animation-delay: 820ms;
+}
+
+html.motion-ready .motion-load-description {
+  animation-delay: 980ms;
+}
+
+html.motion-ready .motion-load-btn-1 {
+  animation-delay: 1120ms;
+}
+
+html.motion-ready .motion-load-btn-2 {
+  animation-delay: 1200ms;
+}
+
+html.motion-ready .motion-load-card-1 {
+  animation-delay: 900ms;
+}
+
+html.motion-ready .motion-load-card-2 {
+  animation-delay: 980ms;
+}
+
+html.motion-ready .motion-load-card-3 {
+  animation-delay: 1060ms;
+}
+
+html.motion-ready .motion-load-scroll {
+  animation: motion-scroll-enter var(--motion-duration-reveal) var(--motion-ease-out) 1300ms forwards;
+}
+
+@keyframes motion-scroll-enter {
+  from { opacity: 0; }
+  to   { opacity: 0.5; }
+}
+
+
+/* --------------------------------------------------------------------------
+   6. Header Scroll — Smoother Transition
+   -------------------------------------------------------------------------- */
+
+.header {
+  transition:
+    background-color 480ms var(--motion-ease-soft),
+    border-color 480ms var(--motion-ease-soft),
+    backdrop-filter 480ms var(--motion-ease-soft),
+    -webkit-backdrop-filter 480ms var(--motion-ease-soft);
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Hover Physics
+   -------------------------------------------------------------------------- */
+
+.btn {
+  transition:
+    transform var(--motion-duration-fast) var(--motion-ease-out),
+    border-color var(--motion-duration-normal) var(--motion-ease-out),
+    background-color var(--motion-duration-normal) var(--motion-ease-out),
+    color var(--motion-duration-normal) var(--motion-ease-out),
+    box-shadow var(--motion-duration-normal) var(--motion-ease-out);
+}
+
+.btn:hover {
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+}
+
+.btn:active {
+  transform: translate3d(0, 0, 0);
+  transition-duration: 80ms;
+}
+
+.product-card {
+  transition:
+    transform var(--motion-duration-normal) var(--motion-ease-out),
+    border-color var(--motion-duration-normal) var(--motion-ease-out),
+    box-shadow var(--motion-duration-normal) var(--motion-ease-out);
+  transform-origin: center center;
+}
+
+.product-card:hover {
+  will-change: transform;
+  transform: translate3d(0, -6px, 0) rotate(0.5deg);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.24);
+}
+
+.product-card:active {
+  transform: translate3d(0, -3px, 0) rotate(0.25deg);
+  transition-duration: 80ms;
+}
+
+.product-card__arrow {
+  transition: color var(--motion-duration-normal) var(--motion-ease-out);
+}
+
+
+/* --------------------------------------------------------------------------
+   8. Hero Card Parallax Layer
+   -------------------------------------------------------------------------- */
+
+.hero__cards-item.is-parallax-ready {
+  transition: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. Scroll Indicator
+   -------------------------------------------------------------------------- */
+
+.hero__scroll {
+  transition: opacity var(--motion-duration-normal) var(--motion-ease-out);
+}
+
+.hero__scroll-thumb {
+  animation: motion-scroll-indicator 3.2s var(--motion-ease-in-out) infinite;
+}
+
+@keyframes motion-scroll-indicator {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate3d(0, 12px, 0);
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-thumb {
+    animation: none !important;
+    opacity: 0.4;
+  }
+}
