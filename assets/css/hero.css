@@ -1,0 +1,504 @@
+/* ==========================================================================
+   HERA LABS — Hero Section
+   Phase 02A: Cinematic Hero Layout
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Hero Layout
+   -------------------------------------------------------------------------- */
+
+.section--hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  padding-top: var(--header-height);
+  isolation: isolate;
+}
+
+.hero__container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 0;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-8);
+  width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Background Atmosphere
+   -------------------------------------------------------------------------- */
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero__bg-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 70% 55% at 72% 42%,
+      rgba(255, 255, 255, 0.028) 0%,
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 45% 40% at 18% 68%,
+      rgba(255, 255, 255, 0.014) 0%,
+      transparent 65%
+    );
+}
+
+.hero__bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 85% 75% at 50% 50%,
+    transparent 35%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+}
+
+.hero__bg-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Left Column — Content
+   -------------------------------------------------------------------------- */
+
+.hero__content {
+  max-width: 520px;
+}
+
+.hero__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.hero__title {
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.hero__description {
+  font-size: clamp(var(--font-size-base), 1.6vw, var(--font-size-lg));
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 42ch;
+  margin-bottom: var(--space-7);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Buttons
+   -------------------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    background-color var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.btn--primary {
+  color: var(--color-text-primary);
+  background-color: var(--color-card);
+  border-color: var(--color-border);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn--secondary {
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border-color: var(--color-border);
+}
+
+.btn--secondary:hover {
+  transform: translateY(-2px);
+  color: var(--color-text-primary);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Right Column — Product Showcase
+   -------------------------------------------------------------------------- */
+
+.hero__showcase {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+.hero__cards {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 340px;
+  margin-inline: auto;
+}
+
+.hero__cards-item {
+  position: absolute;
+  width: 100%;
+  max-width: 340px;
+}
+
+.hero__cards-item--1 {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero__cards-item--2 {
+  top: 88px;
+  right: 0;
+  left: auto;
+  z-index: 2;
+}
+
+.hero__cards-item--3 {
+  bottom: 0;
+  left: 24px;
+  z-index: 3;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. Product Cards
+   -------------------------------------------------------------------------- */
+
+.product-card {
+  --product-accent: var(--color-accent);
+  --product-accent-muted: rgba(216, 216, 216, 0.12);
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--product-accent);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+.product-card--korteks {
+  --product-accent: #7A9BB8;
+  --product-accent-muted: rgba(122, 155, 184, 0.14);
+}
+
+.product-card--esref {
+  --product-accent: #C4AD78;
+  --product-accent-muted: rgba(196, 173, 120, 0.14);
+}
+
+.product-card--heros {
+  --product-accent: #7FA88E;
+  --product-accent-muted: rgba(127, 168, 142, 0.14);
+}
+
+.product-card__icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background-color: var(--product-accent-muted);
+  border: 1px solid var(--product-accent);
+  border-radius: var(--radius-sm);
+  opacity: 0.85;
+}
+
+.product-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-card__name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.product-card__category {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.product-card__badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--product-accent);
+  background-color: var(--product-accent-muted);
+  border-radius: var(--radius-sm);
+}
+
+.product-card__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-base);
+}
+
+.product-card:hover .product-card__arrow {
+  color: var(--product-accent);
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Scroll Indicator
+   -------------------------------------------------------------------------- */
+
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  transition: opacity var(--transition-base);
+}
+
+.hero__scroll:hover {
+  opacity: 0.85;
+}
+
+.hero__scroll-track {
+  display: block;
+  width: 1px;
+  height: 32px;
+  background-color: var(--color-border);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__scroll-thumb {
+  display: block;
+  width: 100%;
+  height: 12px;
+  background-color: var(--color-text-secondary);
+  border-radius: 1px;
+  animation: hero-scroll-pulse 2s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-pulse {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(14px);
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-thumb {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   8. Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .hero__grid {
+    gap: var(--space-7);
+  }
+
+  .hero__showcase {
+    min-height: 360px;
+  }
+
+  .hero__cards {
+    max-width: 380px;
+    height: 320px;
+  }
+
+  .hero__cards-item {
+    max-width: 300px;
+  }
+
+  .hero__cards-item--2 {
+    top: 76px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section--hero {
+    height: auto;
+    max-height: none;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .hero__container {
+    padding-block: var(--space-7) var(--space-10);
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .hero__content {
+    max-width: none;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero__title br {
+    display: none;
+  }
+
+  .hero__title {
+    max-width: 16ch;
+    margin-inline: auto;
+  }
+
+  .hero__description {
+    max-width: 38ch;
+    margin-inline: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__showcase {
+    min-height: auto;
+    width: 100%;
+  }
+
+  .hero__cards {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: none;
+    height: auto;
+  }
+
+  .hero__cards-item {
+    position: static;
+    max-width: none;
+    width: 100%;
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: var(--space-4);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__container {
+    padding-block: var(--space-6) var(--space-8);
+  }
+
+  .hero__eyebrow {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__title {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__description {
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    padding-block: var(--space-4);
+  }
+}

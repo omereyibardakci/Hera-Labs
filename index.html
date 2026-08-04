@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#090909">
   <title>Hera Labs</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
 </head>
 <body>
 
@@ -69,10 +70,90 @@
   <!-- Main Content -->
   <main id="main">
 
-    <section id="hero" class="section section--hero" aria-label="Hero">
-      <div class="container">
-        <div class="section__placeholder" aria-hidden="true"></div>
+    <section id="hero" class="section section--hero" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__bg-glow"></div>
+        <div class="hero__bg-vignette"></div>
+        <div class="hero__bg-noise"></div>
       </div>
+
+      <div class="container hero__container">
+        <div class="hero__grid">
+
+          <!-- Left Column -->
+          <div class="hero__content">
+            <p class="hero__eyebrow">HERA LABS</p>
+            <h1 class="hero__title" id="hero-heading">Crafting thoughtful<br>digital products.</h1>
+            <p class="hero__description">Hera Labs creates carefully designed mobile applications focused on simplicity, performance and meaningful user experiences.</p>
+            <div class="hero__actions">
+              <a href="#products" class="btn btn--primary">Explore Products</a>
+              <a href="#about" class="btn btn--secondary">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="hero__showcase" aria-label="Featured products">
+            <ul class="hero__cards">
+
+              <li class="hero__cards-item hero__cards-item--1">
+                <article class="product-card product-card--korteks">
+                  <div class="product-card__icon" aria-hidden="true"></div>
+                  <div class="product-card__content">
+                    <h2 class="product-card__name">Korteks</h2>
+                    <p class="product-card__category">Education</p>
+                    <span class="product-card__badge">Available</span>
+                  </div>
+                  <span class="product-card__arrow" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 7H11M11 7L8 4M11 7L8 10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </article>
+              </li>
+
+              <li class="hero__cards-item hero__cards-item--2">
+                <article class="product-card product-card--esref">
+                  <div class="product-card__icon" aria-hidden="true"></div>
+                  <div class="product-card__content">
+                    <h2 class="product-card__name">Eşref Saati</h2>
+                    <p class="product-card__category">Lifestyle</p>
+                    <span class="product-card__badge">Available</span>
+                  </div>
+                  <span class="product-card__arrow" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 7H11M11 7L8 4M11 7L8 10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </article>
+              </li>
+
+              <li class="hero__cards-item hero__cards-item--3">
+                <article class="product-card product-card--heros">
+                  <div class="product-card__icon" aria-hidden="true"></div>
+                  <div class="product-card__content">
+                    <h2 class="product-card__name">Heros</h2>
+                    <p class="product-card__category">Community</p>
+                    <span class="product-card__badge product-card__badge--soon">Coming Soon</span>
+                  </div>
+                  <span class="product-card__arrow" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 7H11M11 7L8 4M11 7L8 10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </article>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+        <span class="hero__scroll-track" aria-hidden="true">
+          <span class="hero__scroll-thumb"></span>
+        </span>
+      </a>
     </section>
 
     <section id="about" class="section section--about" aria-label="About">
