@@ -1,0 +1,375 @@
+/* ==========================================================================
+   HERA LABS — Products Section
+   Phase 03A: Premium Products Showcase
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Section Layout
+   -------------------------------------------------------------------------- */
+
+.section--products {
+  padding-block: var(--space-10) var(--space-9);
+}
+
+.products__header {
+  max-width: 640px;
+  margin-bottom: var(--space-8);
+}
+
+.products__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.products__title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+  max-width: 14ch;
+}
+
+.products__intro {
+  font-size: clamp(var(--font-size-base), 1.5vw, var(--font-size-lg));
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 52ch;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Product Grid
+   -------------------------------------------------------------------------- */
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  list-style: none;
+}
+
+.products__grid-item {
+  display: flex;
+  min-width: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Product Cards — Base
+   -------------------------------------------------------------------------- */
+
+.products-card {
+  --product-accent: var(--color-accent);
+  --product-accent-muted: rgba(216, 216, 216, 0.1);
+  --product-surface: var(--color-card);
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 420px;
+  padding: var(--space-6);
+  background-color: var(--product-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.products-card:hover {
+  transform: translate3d(0, -4px, 0);
+  border-color: var(--product-accent);
+  background-color: color-mix(in srgb, var(--product-surface) 88%, var(--product-accent) 12%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.products-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.products-card__logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background-color: var(--product-accent-muted);
+  border: 1px solid var(--product-accent);
+  border-radius: var(--radius-md);
+  opacity: 0.9;
+  transition:
+    opacity 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.products-card:hover .products-card__logo {
+  opacity: 1;
+  border-color: color-mix(in srgb, var(--product-accent) 80%, white 20%);
+}
+
+.products-card__badge {
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--product-accent);
+  background-color: var(--product-accent-muted);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.products-card:hover .products-card__badge {
+  color: color-mix(in srgb, var(--product-accent) 75%, white 25%);
+}
+
+.products-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.products-card__name {
+  font-size: clamp(1.375rem, 2vw, 1.625rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.products-card__category {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.products-card__description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+}
+
+.products-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Product Accents & Personalities
+   -------------------------------------------------------------------------- */
+
+/* Korteks — structured, analytical */
+.products-card--korteks {
+  --product-accent: #7A9BB8;
+  --product-accent-muted: rgba(122, 155, 184, 0.12);
+  --product-surface: #161616;
+}
+
+.products-card--korteks .products-card__logo {
+  border-radius: var(--radius-sm);
+}
+
+.products-card--korteks .products-card__body {
+  gap: var(--space-2);
+}
+
+/* Eşref Saati — calm, elegant, spacious */
+.products-card--esref {
+  --product-accent: #C4AD78;
+  --product-accent-muted: rgba(196, 173, 120, 0.12);
+  --product-surface: #151515;
+}
+
+.products-card--esref {
+  padding: var(--space-7) var(--space-6);
+}
+
+.products-card--esref .products-card__body {
+  gap: var(--space-4);
+}
+
+.products-card--esref .products-card__description {
+  max-width: 36ch;
+}
+
+/* Heros — friendly, soft, community */
+.products-card--heros {
+  --product-accent: #7FA88E;
+  --product-accent-muted: rgba(127, 168, 142, 0.12);
+  --product-surface: #161816;
+}
+
+.products-card--heros .products-card__logo {
+  border-radius: var(--radius-lg);
+}
+
+.products-card--heros .products-card__category {
+  letter-spacing: 0.04em;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Store Buttons
+   -------------------------------------------------------------------------- */
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  opacity: 0.55;
+  cursor: not-allowed;
+  transition:
+    opacity 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.products-card:hover .store-btn {
+  opacity: 0.85;
+}
+
+.store-btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+  transition: color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.products-card:hover .store-btn {
+  border-color: color-mix(in srgb, var(--color-border) 60%, var(--product-accent) 40%);
+}
+
+.products-card:hover .store-btn__icon {
+  color: var(--product-accent);
+}
+
+
+/* --------------------------------------------------------------------------
+   6. Scroll Reveal Stagger (uses existing motion-reveal)
+   -------------------------------------------------------------------------- */
+
+.products__eyebrow.motion-reveal {
+  transition-delay: 0ms;
+}
+
+.products__title.motion-reveal {
+  transition-delay: 80ms;
+}
+
+.products__intro.motion-reveal {
+  transition-delay: 160ms;
+}
+
+.products__grid-item:nth-child(1) .products-card.motion-reveal {
+  transition-delay: 240ms;
+}
+
+.products__grid-item:nth-child(2) .products-card.motion-reveal {
+  transition-delay: 320ms;
+}
+
+.products__grid-item:nth-child(3) .products-card.motion-reveal {
+  transition-delay: 400ms;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
+  .products__grid-item:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .section--products {
+    padding-block: var(--space-9) var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .products__header {
+    margin-bottom: var(--space-7);
+  }
+
+  .products__title {
+    max-width: none;
+  }
+
+  .products__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .products__grid-item:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .products-card {
+    min-height: auto;
+  }
+
+  .products-card--esref {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .section--products {
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  .products__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .products-card__footer {
+    flex-direction: column;
+  }
+
+  .store-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .products-card:hover {
+    transform: none;
+  }
+}
