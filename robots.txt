@@ -1,0 +1,5 @@
+# Hera Labs — https://heralabs.dev/
+User-agent: *
+Allow: /
+
+Sitemap: https://heralabs.dev/sitemap.xml
