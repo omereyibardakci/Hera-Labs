@@ -139,8 +139,7 @@
 .ecosystem__hub-logo {
   width: 28px;
   height: 28px;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  object-fit: contain;
   border-radius: var(--radius-sm);
   flex-shrink: 0;
 }
@@ -233,16 +232,9 @@
 .ecosystem-node__logo {
   width: 32px;
   height: 32px;
-  background-color: var(--node-accent-muted);
-  border: 1px solid var(--node-accent);
+  object-fit: cover;
   border-radius: var(--radius-sm);
   flex-shrink: 0;
-  transition: border-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.ecosystem-node:hover .ecosystem-node__logo,
-.ecosystem-node:focus-visible .ecosystem-node__logo {
-  border-color: color-mix(in srgb, var(--node-accent) 75%, var(--color-mix-light) 25%);
 }
 
 .ecosystem-node__name {

@@ -27,9 +27,9 @@
 
   <!-- Favicons -->
   <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/favicon/web-app-manifest-192x192.png">
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Open Graph -->
@@ -62,10 +62,12 @@
         "@id": "https://heralabs.dev/#organization",
         "name": "Hera Labs",
         "url": "https://heralabs.dev/",
-        "logo": "https://heralabs.dev/assets/images/og-image.png",
+        "logo": "https://heralabs.dev/assets/logo.png",
         "description": "Independent software studio building carefully crafted mobile applications.",
-        "email": "hello@heralabs.dev",
-        "sameAs": []
+        "email": "omereyibardakcidestek@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/company/hera-labs-official/"
+        ]
       },
       {
         "@type": "WebSite",
@@ -129,7 +131,7 @@
 
       <!-- Logo -->
       <a href="#hero" class="header__logo" data-i18n-aria="navigation.logoHome">
-        <span class="header__logo-mark" aria-hidden="true"></span>
+        <img class="header__logo-mark" src="assets/logo.png" alt="" width="28" height="28">
         <span class="header__logo-text" data-i18n="brand.name">HERA LABS</span>
       </a>
 
@@ -194,7 +196,10 @@
 
           <!-- Left Column -->
           <div class="hero__content">
-            <p class="hero__eyebrow motion-on-load motion-fade-up motion-load-eyebrow" data-i18n="hero.eyebrow">HERA LABS</p>
+            <p class="hero__eyebrow motion-on-load motion-fade-up motion-load-eyebrow">
+              <img class="hero__eyebrow-logo" src="assets/logo.png" alt="" width="20" height="20" aria-hidden="true">
+              <span data-i18n="hero.eyebrow">HERA LABS</span>
+            </p>
             <h1 class="hero__title" id="hero-heading">
               <span class="motion-line motion-load-line-1"><span class="motion-line__inner" data-i18n="hero.title.line1">Crafting thoughtful</span></span>
               <span class="motion-line motion-load-line-2"><span class="motion-line__inner" data-i18n="hero.title.line2">digital products.</span></span>
@@ -212,7 +217,7 @@
 
               <li class="hero__cards-item hero__cards-item--1 motion-on-load motion-scale-in motion-load-card-1">
                 <article class="product-card product-card--korteks">
-                  <div class="product-card__icon" aria-hidden="true"></div>
+                  <img class="product-card__icon" src="assets/images/apps/korteks.png" alt="" width="36" height="36" aria-hidden="true">
                   <div class="product-card__content">
                     <h3 class="product-card__name" data-i18n="hero.cards.korteks.name">Korteks</h3>
                     <p class="product-card__category" data-i18n="hero.cards.korteks.category">Education</p>
@@ -228,7 +233,7 @@
 
               <li class="hero__cards-item hero__cards-item--2 motion-on-load motion-scale-in motion-load-card-2">
                 <article class="product-card product-card--esref">
-                  <div class="product-card__icon" aria-hidden="true"></div>
+                  <img class="product-card__icon" src="assets/images/apps/esref-saati.png" alt="" width="36" height="36" aria-hidden="true">
                   <div class="product-card__content">
                     <h3 class="product-card__name" data-i18n="hero.cards.esref.name">Eşref Saati</h3>
                     <p class="product-card__category" data-i18n="hero.cards.esref.category">Lifestyle</p>
@@ -244,11 +249,11 @@
 
               <li class="hero__cards-item hero__cards-item--3 motion-on-load motion-scale-in motion-load-card-3">
                 <article class="product-card product-card--heros">
-                  <div class="product-card__icon" aria-hidden="true"></div>
+                  <img class="product-card__icon" src="assets/images/apps/heros.png" alt="" width="36" height="36" aria-hidden="true">
                   <div class="product-card__content">
                     <h3 class="product-card__name" data-i18n="hero.cards.heros.name">Heros</h3>
                     <p class="product-card__category" data-i18n="hero.cards.heros.category">Community</p>
-                    <span class="product-card__badge" data-i18n="status.comingSoon">Coming Soon</span>
+                    <span class="product-card__badge" data-i18n="status.available">Available</span>
                   </div>
                   <span class="product-card__arrow" aria-hidden="true">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -331,7 +336,7 @@
           <li class="products__grid-item">
             <article class="products-card products-card--korteks motion-reveal">
               <div class="products-card__top">
-                <div class="products-card__logo" aria-hidden="true"></div>
+                <img class="products-card__logo" src="assets/images/apps/korteks.png" alt="" width="48" height="48" aria-hidden="true">
                 <span class="products-card__badge" data-i18n="status.available">Available</span>
               </div>
               <div class="products-card__body">
@@ -340,14 +345,14 @@
                 <p class="products-card__description" data-i18n="products.items.korteks.description">Track trial exams, analyze performance and monitor academic progress through meaningful statistics.</p>
               </div>
               <div class="products-card__footer">
-                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.korteks.store.appStore">
+                <a href="https://apps.apple.com/us/app/korteks-deneme-takip-analiz/id6778207399" class="store-btn" target="_blank" rel="noopener noreferrer" data-i18n-aria="products.items.korteks.store.appStore">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 2.5L9.8 6.2H13.6L10.5 8.7L11.6 12.5L8 10.2L4.4 12.5L5.5 8.7L2.4 6.2H6.2L8 2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
                     </svg>
                   </span>
                   <span data-i18n="store.appStore">App Store</span>
-                </button>
+                </a>
                 <button type="button" class="store-btn" disabled data-i18n-aria="products.items.korteks.store.googlePlay">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +369,7 @@
           <li class="products__grid-item">
             <article class="products-card products-card--esref motion-reveal">
               <div class="products-card__top">
-                <div class="products-card__logo" aria-hidden="true"></div>
+                <img class="products-card__logo" src="assets/images/apps/esref-saati.png" alt="" width="48" height="48" aria-hidden="true">
                 <span class="products-card__badge" data-i18n="status.available">Available</span>
               </div>
               <div class="products-card__body">
@@ -373,15 +378,15 @@
                 <p class="products-card__description" data-i18n="products.items.esref.description">Discover meaningful moments through a calm and beautifully crafted spiritual timing experience.</p>
               </div>
               <div class="products-card__footer">
-                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.esref.store.appStore">
+                <a href="https://apps.apple.com/us/app/e%C5%9Fref-saati/id6755933600" class="store-btn" target="_blank" rel="noopener noreferrer" data-i18n-aria="products.items.esref.store.appStore">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 2.5L9.8 6.2H13.6L10.5 8.7L11.6 12.5L8 10.2L4.4 12.5L5.5 8.7L2.4 6.2H6.2L8 2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
                     </svg>
                   </span>
                   <span data-i18n="store.appStore">App Store</span>
-                </button>
-                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.esref.store.googlePlay">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.asus.countdown" class="store-btn" target="_blank" rel="noopener noreferrer" data-i18n-aria="products.items.esref.store.googlePlay">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3 2.5L11.5 8L3 13.5V2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
@@ -389,7 +394,7 @@
                     </svg>
                   </span>
                   <span data-i18n="store.googlePlay">Google Play</span>
-                </button>
+                </a>
               </div>
             </article>
           </li>
@@ -397,8 +402,8 @@
           <li class="products__grid-item">
             <article class="products-card products-card--heros motion-reveal">
               <div class="products-card__top">
-                <div class="products-card__logo" aria-hidden="true"></div>
-                <span class="products-card__badge" data-i18n="status.comingSoon">Coming Soon</span>
+                <img class="products-card__logo" src="assets/images/apps/heros.png" alt="" width="48" height="48" aria-hidden="true">
+                <span class="products-card__badge" data-i18n="status.available">Available</span>
               </div>
               <div class="products-card__body">
                 <h3 class="products-card__name" data-i18n="products.items.heros.name">Heros</h3>
@@ -414,7 +419,7 @@
                   </span>
                   <span data-i18n="store.appStore">App Store</span>
                 </button>
-                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.heros.store.googlePlay">
+                <a href="https://play.google.com/store/apps/details?id=com.asus.herosprojectdemo" class="store-btn" target="_blank" rel="noopener noreferrer" data-i18n-aria="products.items.heros.store.googlePlay">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3 2.5L11.5 8L3 13.5V2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
@@ -422,7 +427,7 @@
                     </svg>
                   </span>
                   <span data-i18n="store.googlePlay">Google Play</span>
-                </button>
+                </a>
               </div>
             </article>
           </li>
@@ -505,7 +510,7 @@
           </div>
 
           <div class="ecosystem__hub motion-reveal">
-            <div class="ecosystem__hub-logo" aria-hidden="true"></div>
+            <img class="ecosystem__hub-logo" src="assets/logo.png" alt="" width="28" height="28" aria-hidden="true">
             <span class="ecosystem__hub-name" data-i18n="brand.name">HERA LABS</span>
             <span class="ecosystem__hub-subtitle" data-i18n="ecosystem.center.subtitle">Software Studio</span>
           </div>
@@ -514,7 +519,7 @@
 
             <li>
               <a href="#products" class="ecosystem-node ecosystem-node--korteks">
-                <div class="ecosystem-node__logo" aria-hidden="true"></div>
+                <img class="ecosystem-node__logo" src="assets/images/apps/korteks.png" alt="" width="32" height="32" aria-hidden="true">
                 <span class="ecosystem-node__name" data-i18n="hero.cards.korteks.name">Korteks</span>
                 <span class="ecosystem-node__category" data-i18n="hero.cards.korteks.category">Education</span>
                 <span class="ecosystem-node__status">
@@ -526,7 +531,7 @@
 
             <li>
               <a href="#products" class="ecosystem-node ecosystem-node--esref">
-                <div class="ecosystem-node__logo" aria-hidden="true"></div>
+                <img class="ecosystem-node__logo" src="assets/images/apps/esref-saati.png" alt="" width="32" height="32" aria-hidden="true">
                 <span class="ecosystem-node__name" data-i18n="hero.cards.esref.name">Eşref Saati</span>
                 <span class="ecosystem-node__category" data-i18n="hero.cards.esref.category">Lifestyle</span>
                 <span class="ecosystem-node__status">
@@ -538,12 +543,12 @@
 
             <li>
               <a href="#products" class="ecosystem-node ecosystem-node--heros">
-                <div class="ecosystem-node__logo" aria-hidden="true"></div>
+                <img class="ecosystem-node__logo" src="assets/images/apps/heros.png" alt="" width="32" height="32" aria-hidden="true">
                 <span class="ecosystem-node__name" data-i18n="hero.cards.heros.name">Heros</span>
                 <span class="ecosystem-node__category" data-i18n="hero.cards.heros.category">Community</span>
                 <span class="ecosystem-node__status">
                   <span class="ecosystem-node__status-dot" aria-hidden="true"></span>
-                  <span data-i18n="status.comingSoon">Coming Soon</span>
+                  <span data-i18n="status.available">Available</span>
                 </span>
               </a>
             </li>
@@ -555,7 +560,7 @@
         <div class="ecosystem__timeline motion-reveal" data-i18n-aria-label="ecosystem.diagram">
 
           <div class="ecosystem__hub motion-reveal">
-            <div class="ecosystem__hub-logo" aria-hidden="true"></div>
+            <img class="ecosystem__hub-logo" src="assets/logo.png" alt="" width="28" height="28" aria-hidden="true">
             <span class="ecosystem__hub-name" data-i18n="brand.name">HERA LABS</span>
             <span class="ecosystem__hub-subtitle" data-i18n="ecosystem.center.subtitle">Software Studio</span>
           </div>
@@ -563,7 +568,7 @@
           <span class="ecosystem__timeline-connector" aria-hidden="true"></span>
 
           <a href="#products" class="ecosystem-node ecosystem-node--korteks motion-reveal">
-            <div class="ecosystem-node__logo" aria-hidden="true"></div>
+            <img class="ecosystem-node__logo" src="assets/images/apps/korteks.png" alt="" width="32" height="32" aria-hidden="true">
             <span class="ecosystem-node__name" data-i18n="hero.cards.korteks.name">Korteks</span>
             <span class="ecosystem-node__category" data-i18n="hero.cards.korteks.category">Education</span>
             <span class="ecosystem-node__status">
@@ -575,7 +580,7 @@
           <span class="ecosystem__timeline-connector" aria-hidden="true"></span>
 
           <a href="#products" class="ecosystem-node ecosystem-node--esref motion-reveal">
-            <div class="ecosystem-node__logo" aria-hidden="true"></div>
+            <img class="ecosystem-node__logo" src="assets/images/apps/esref-saati.png" alt="" width="32" height="32" aria-hidden="true">
             <span class="ecosystem-node__name" data-i18n="hero.cards.esref.name">Eşref Saati</span>
             <span class="ecosystem-node__category" data-i18n="hero.cards.esref.category">Lifestyle</span>
             <span class="ecosystem-node__status">
@@ -587,12 +592,12 @@
           <span class="ecosystem__timeline-connector" aria-hidden="true"></span>
 
           <a href="#products" class="ecosystem-node ecosystem-node--heros motion-reveal">
-            <div class="ecosystem-node__logo" aria-hidden="true"></div>
+            <img class="ecosystem-node__logo" src="assets/images/apps/heros.png" alt="" width="32" height="32" aria-hidden="true">
             <span class="ecosystem-node__name" data-i18n="hero.cards.heros.name">Heros</span>
             <span class="ecosystem-node__category" data-i18n="hero.cards.heros.category">Community</span>
             <span class="ecosystem-node__status">
               <span class="ecosystem-node__status-dot" aria-hidden="true"></span>
-              <span data-i18n="status.comingSoon">Coming Soon</span>
+              <span data-i18n="status.available">Available</span>
             </span>
           </a>
 
@@ -618,6 +623,7 @@
           <li class="journey__item journey__item--heros">
             <span class="journey__marker" aria-hidden="true"></span>
             <article class="journey-card motion-reveal">
+              <img class="journey-card__logo" src="assets/images/apps/heros.png" alt="" width="32" height="32" aria-hidden="true">
               <time class="journey-card__year" datetime="2025" data-i18n="journey.items.heros.year">2025</time>
               <h3 class="journey-card__product" data-i18n="journey.items.heros.name">Heros</h3>
               <span class="journey-card__category" data-i18n="journey.items.heros.category">Community</span>
@@ -628,6 +634,7 @@
           <li class="journey__item journey__item--esref">
             <span class="journey__marker" aria-hidden="true"></span>
             <article class="journey-card motion-reveal">
+              <img class="journey-card__logo" src="assets/images/apps/esref-saati.png" alt="" width="32" height="32" aria-hidden="true">
               <time class="journey-card__year" datetime="2026" data-i18n="journey.items.esref.year">2026</time>
               <h3 class="journey-card__product" data-i18n="journey.items.esref.name">Eşref Saati</h3>
               <span class="journey-card__category" data-i18n="journey.items.esref.category">Lifestyle</span>
@@ -638,6 +645,7 @@
           <li class="journey__item journey__item--korteks">
             <span class="journey__marker" aria-hidden="true"></span>
             <article class="journey-card motion-reveal">
+              <img class="journey-card__logo" src="assets/images/apps/korteks.png" alt="" width="32" height="32" aria-hidden="true">
               <time class="journey-card__year" datetime="2026" data-i18n="journey.items.korteks.year">2026</time>
               <h3 class="journey-card__product" data-i18n="journey.items.korteks.name">Korteks</h3>
               <span class="journey-card__category" data-i18n="journey.items.korteks.category">Education</span>
@@ -671,36 +679,36 @@
               <span data-i18n="contact.title.line2">meaningful.</span>
             </h2>
             <p class="contact__intro motion-reveal" data-i18n="contact.intro">Whether you have a question about our products, thoughtful feedback, a partnership idea or simply want to say hello — we'd like to hear from you.</p>
-            <a href="mailto:hello@heralabs.dev" class="contact__email-btn motion-reveal" data-i18n="contact.cta.button" data-i18n-aria="contact.cta.button">Send an Email</a>
+            <a href="mailto:omereyibardakcidestek@gmail.com?subject=Hello%20from%20Hera%20Labs%20website" class="contact__email-btn motion-reveal" data-i18n="contact.cta.button" data-i18n-aria="contact.cta.button">Send an Email</a>
           </div>
 
           <ul class="contact__cards">
 
             <li class="contact__cards-item">
-              <a href="mailto:hello@heralabs.dev" class="contact-card motion-reveal" data-i18n-aria="contact.cards.email.label">
+              <a href="mailto:omereyibardakcidestek@gmail.com" class="contact-card motion-reveal" data-i18n-aria="contact.cards.email.label">
                 <span class="contact-card__label" data-i18n="contact.cards.email.label">Email</span>
-                <span class="contact-card__value" data-i18n="contact.cards.email.value">hello@heralabs.dev</span>
+                <span class="contact-card__value" data-i18n="contact.cards.email.value">omereyibardakcidestek@gmail.com</span>
               </a>
             </li>
 
             <li class="contact__cards-item">
               <div class="contact-card contact-card--static motion-reveal" data-i18n-aria-label="contact.cards.github.label">
                 <span class="contact-card__label" data-i18n="contact.cards.github.label">GitHub</span>
-                <span class="contact-card__value" data-i18n="contact.cards.github.value">Coming soon</span>
+                <span class="contact-card__value" data-i18n="contact.cards.github.value">Not Available</span>
               </div>
             </li>
 
             <li class="contact__cards-item">
-              <div class="contact-card contact-card--static motion-reveal" data-i18n-aria-label="contact.cards.linkedin.label">
+              <a href="https://www.linkedin.com/company/hera-labs-official/" class="contact-card motion-reveal" target="_blank" rel="noopener noreferrer" data-i18n-aria="contact.cards.linkedin.aria">
                 <span class="contact-card__label" data-i18n="contact.cards.linkedin.label">LinkedIn</span>
-                <span class="contact-card__value" data-i18n="contact.cards.linkedin.value">Coming soon</span>
-              </div>
+                <span class="contact-card__value" data-i18n="contact.cards.linkedin.value">Hera Labs</span>
+              </a>
             </li>
 
             <li class="contact__cards-item">
               <div class="contact-card contact-card--static motion-reveal" data-i18n-aria-label="contact.cards.appStore.label">
                 <span class="contact-card__label" data-i18n="contact.cards.appStore.label">App Store</span>
-                <span class="contact-card__value" data-i18n="contact.cards.appStore.value">Coming soon</span>
+                <span class="contact-card__value" data-i18n="contact.cards.appStore.value">Not Available</span>
               </div>
             </li>
 
@@ -723,7 +731,10 @@
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
-      <p class="footer__copy" data-i18n="footer.copyright">&copy; Hera Labs</p>
+      <div class="footer__brand">
+        <img class="footer__logo-mark" src="assets/logo.png" alt="" width="24" height="24" aria-hidden="true">
+        <p class="footer__copy" data-i18n="footer.copyright">&copy; Hera Labs</p>
+      </div>
       <p class="footer__tagline" data-i18n="footer.tagline">Built with precision.</p>
     </div>
   </footer>

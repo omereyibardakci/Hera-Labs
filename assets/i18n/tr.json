@@ -29,7 +29,7 @@
   },
   "status": {
     "available": "Yayında",
-    "comingSoon": "Yakında"
+    "notAvailable": "Mevcut Değil"
   },
   "store": {
     "appStore": "App Store",
@@ -100,8 +100,8 @@
         "category": "Eğitim",
         "description": "Deneme sınavlarını takip edin, performansı analiz edin ve anlamlı istatistiklerle akademik ilerlemenizi izleyin.",
         "store": {
-          "appStore": "Korteks App Store'da — yakında",
-          "googlePlay": "Korteks Google Play'de — yakında"
+          "appStore": "Korteks'i App Store'da aç",
+          "googlePlay": "Korteks Google Play'de — mevcut değil"
         }
       },
       "esref": {
@@ -109,8 +109,8 @@
         "category": "Yaşam Tarzı",
         "description": "Sakin ve özenle tasarlanmış bir manevi zaman deneyimiyle anlamlı anları keşfedin.",
         "store": {
-          "appStore": "Eşref Saati App Store'da — yakında",
-          "googlePlay": "Eşref Saati Google Play'de — yakında"
+          "appStore": "Eşref Saati'ni App Store'da aç",
+          "googlePlay": "Eşref Saati'ni Google Play'de aç"
         }
       },
       "heros": {
@@ -118,8 +118,8 @@
         "category": "Topluluk",
         "description": "Kayıp ve sahiplendirilmeye açık evcil hayvanların modern bir topluluk platformu aracılığıyla aileleriyle yeniden buluşmasına yardımcı olur.",
         "store": {
-          "appStore": "Heros App Store'da — yakında",
-          "googlePlay": "Heros Google Play'de — yakında"
+          "appStore": "Heros App Store'da — mevcut değil",
+          "googlePlay": "Heros'u Google Play'de aç"
         }
       }
     }
@@ -208,25 +208,26 @@
     "intro": "Ürünlerimiz hakkında bir sorunuz, düşünceli bir geri bildiriminiz, bir iş birliği fikriniz veya sadece merhaba demek istemeniz fark etmez — sizden haber almak isteriz.",
     "cta": {
       "button": "E-posta Gönder",
-      "email": "hello@heralabs.dev",
+      "email": "omereyibardakcidestek@gmail.com",
       "mailtoSubject": "Hera Labs web sitesinden merhaba"
     },
     "cards": {
       "email": {
         "label": "E-posta",
-        "value": "hello@heralabs.dev"
+        "value": "omereyibardakcidestek@gmail.com"
       },
       "github": {
         "label": "GitHub",
-        "value": "Yakında"
+        "value": "Mevcut Değil"
       },
       "linkedin": {
         "label": "LinkedIn",
-        "value": "Yakında"
+        "value": "Hera Labs",
+        "aria": "Hera Labs LinkedIn sayfasını aç"
       },
       "appStore": {
         "label": "App Store",
-        "value": "Yakında"
+        "value": "Mevcut Değil"
       },
       "googlePlay": {
         "label": "Google Play",

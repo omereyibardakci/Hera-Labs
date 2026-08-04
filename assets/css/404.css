@@ -13,6 +13,15 @@
   text-align: center;
 }
 
+.not-found__logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-5);
+}
+
 .not-found__code {
   font-size: clamp(4rem, 12vw, 6rem);
   font-weight: var(--font-weight-semibold);

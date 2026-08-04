@@ -29,7 +29,7 @@
   },
   "status": {
     "available": "Available",
-    "comingSoon": "Coming Soon"
+    "notAvailable": "Not Available"
   },
   "store": {
     "appStore": "App Store",
@@ -100,8 +100,8 @@
         "category": "Education",
         "description": "Track trial exams, analyze performance and monitor academic progress through meaningful statistics.",
         "store": {
-          "appStore": "Korteks on the App Store — coming soon",
-          "googlePlay": "Korteks on Google Play — coming soon"
+          "appStore": "Open Korteks on the App Store",
+          "googlePlay": "Korteks on Google Play — not available"
         }
       },
       "esref": {
@@ -109,8 +109,8 @@
         "category": "Lifestyle",
         "description": "Discover meaningful moments through a calm and beautifully crafted spiritual timing experience.",
         "store": {
-          "appStore": "Eşref Saati on the App Store — coming soon",
-          "googlePlay": "Eşref Saati on Google Play — coming soon"
+          "appStore": "Open Eşref Saati on the App Store",
+          "googlePlay": "Open Eşref Saati on Google Play"
         }
       },
       "heros": {
@@ -118,8 +118,8 @@
         "category": "Community",
         "description": "Helping lost and adoptable pets reconnect with families through a modern community platform.",
         "store": {
-          "appStore": "Heros on the App Store — coming soon",
-          "googlePlay": "Heros on Google Play — coming soon"
+          "appStore": "Heros on the App Store — not available",
+          "googlePlay": "Open Heros on Google Play"
         }
       }
     }
@@ -208,25 +208,26 @@
     "intro": "Whether you have a question about our products, thoughtful feedback, a partnership idea or simply want to say hello — we'd like to hear from you.",
     "cta": {
       "button": "Send an Email",
-      "email": "hello@heralabs.dev",
+      "email": "omereyibardakcidestek@gmail.com",
       "mailtoSubject": "Hello from Hera Labs website"
     },
     "cards": {
       "email": {
         "label": "Email",
-        "value": "hello@heralabs.dev"
+        "value": "omereyibardakcidestek@gmail.com"
       },
       "github": {
         "label": "GitHub",
-        "value": "Coming soon"
+        "value": "Not Available"
       },
       "linkedin": {
         "label": "LinkedIn",
-        "value": "Coming soon"
+        "value": "Hera Labs",
+        "aria": "Open Hera Labs on LinkedIn"
       },
       "appStore": {
         "label": "App Store",
-        "value": "Coming soon"
+        "value": "Not Available"
       },
       "googlePlay": {
         "label": "Google Play",

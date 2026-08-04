@@ -124,6 +124,19 @@
     border-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.journey-card__logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-3);
+}
+
+.journey__item:nth-child(odd) .journey-card__logo {
+  margin-left: auto;
+}
+
 .journey-card:hover {
   transform: translate3d(0, -2px, 0);
   border-color: var(--journey-accent);
