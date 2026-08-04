@@ -195,6 +195,42 @@
       }
     }
   },
+  "contact": {
+    "sectionLabel": "Contact",
+    "eyebrow": "CONTACT",
+    "title": {
+      "line1": "Let's build something",
+      "line2": "meaningful."
+    },
+    "intro": "Whether you have a question about our products, thoughtful feedback, a partnership idea or simply want to say hello — we'd like to hear from you.",
+    "cta": {
+      "button": "Send an Email",
+      "email": "hello@heralabs.dev",
+      "mailtoSubject": "Hello from Hera Labs website"
+    },
+    "cards": {
+      "email": {
+        "label": "Email",
+        "value": "hello@heralabs.dev"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "Coming soon"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Coming soon"
+      },
+      "appStore": {
+        "label": "App Store",
+        "value": "Coming soon"
+      },
+      "googlePlay": {
+        "label": "Google Play",
+        "value": "Available products"
+      }
+    }
+  },
   "sections": {
     "technology": "Engineering",
     "roadmap": "Product Ecosystem",

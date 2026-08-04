@@ -195,6 +195,42 @@
       }
     }
   },
+  "contact": {
+    "sectionLabel": "İletişim",
+    "eyebrow": "İLETİŞİM",
+    "title": {
+      "line1": "Birlikte anlamlı",
+      "line2": "bir şeyler inşa edelim."
+    },
+    "intro": "Ürünlerimiz hakkında bir sorunuz, düşünceli bir geri bildiriminiz, bir iş birliği fikriniz veya sadece merhaba demek istemeniz fark etmez — sizden haber almak isteriz.",
+    "cta": {
+      "button": "E-posta Gönder",
+      "email": "hello@heralabs.dev",
+      "mailtoSubject": "Hera Labs web sitesinden merhaba"
+    },
+    "cards": {
+      "email": {
+        "label": "E-posta",
+        "value": "hello@heralabs.dev"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "Yakında"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Yakında"
+      },
+      "appStore": {
+        "label": "App Store",
+        "value": "Yakında"
+      },
+      "googlePlay": {
+        "label": "Google Play",
+        "value": "Mevcut ürünler"
+      }
+    }
+  },
   "sections": {
     "technology": "Mühendislik",
     "roadmap": "Ürün Ekosistemi",
