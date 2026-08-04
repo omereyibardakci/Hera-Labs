@@ -148,9 +148,22 @@
       }
     }
   },
+  "ecosystem": {
+    "sectionLabel": "Product Ecosystem",
+    "eyebrow": "ECOSYSTEM",
+    "title": {
+      "line1": "Different products.",
+      "line2": "One vision."
+    },
+    "intro": "Every Hera Labs application is built independently — yet each one follows the same philosophy, engineering standards and design principles that define our work.",
+    "diagram": "Hera Labs product ecosystem",
+    "center": {
+      "subtitle": "Software Studio"
+    }
+  },
   "sections": {
     "technology": "Engineering",
-    "roadmap": "Roadmap",
+    "roadmap": "Product Ecosystem",
     "contact": "Contact"
   },
   "footer": {

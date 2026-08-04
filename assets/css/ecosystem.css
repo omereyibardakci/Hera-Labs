@@ -1,0 +1,444 @@
+/* ==========================================================================
+   HERA LABS — Product Ecosystem
+   Phase 07: Ecosystem Section
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Section Layout
+   -------------------------------------------------------------------------- */
+
+.section--roadmap {
+  padding-block: var(--space-10) var(--space-9);
+  border-top: 1px solid rgba(43, 43, 43, 0.4);
+}
+
+.ecosystem__header {
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: var(--space-9);
+  text-align: center;
+}
+
+.ecosystem__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.ecosystem__title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.ecosystem__intro {
+  font-size: clamp(var(--font-size-base), 1.5vw, var(--font-size-lg));
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 52ch;
+  margin-inline: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Diagram Container
+   -------------------------------------------------------------------------- */
+
+.ecosystem__diagram {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  min-height: 420px;
+  margin-inline: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Connection Lines
+   -------------------------------------------------------------------------- */
+
+.ecosystem__lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ecosystem__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  background-color: var(--color-border);
+  transform-origin: 0 50%;
+  transition: background-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ecosystem__line--korteks {
+  width: 118px;
+  transform: rotate(-90deg);
+}
+
+.ecosystem__line--esref {
+  width: 168px;
+  transform: rotate(142deg);
+}
+
+.ecosystem__line--heros {
+  width: 168px;
+  transform: rotate(38deg);
+}
+
+.ecosystem__diagram:has(.ecosystem-node--korteks:hover) .ecosystem__line--korteks,
+.ecosystem__diagram:has(.ecosystem-node--korteks:focus-visible) .ecosystem__line--korteks {
+  background-color: #7A9BB8;
+}
+
+.ecosystem__diagram:has(.ecosystem-node--esref:hover) .ecosystem__line--esref,
+.ecosystem__diagram:has(.ecosystem-node--esref:focus-visible) .ecosystem__line--esref {
+  background-color: #C4AD78;
+}
+
+.ecosystem__diagram:has(.ecosystem-node--heros:hover) .ecosystem__line--heros,
+.ecosystem__diagram:has(.ecosystem-node--heros:focus-visible) .ecosystem__line--heros {
+  background-color: #7FA88E;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Center Hub
+   -------------------------------------------------------------------------- */
+
+.ecosystem__hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 128px;
+  height: 128px;
+  padding: var(--space-3);
+  text-align: center;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ecosystem__hub-logo {
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.ecosystem__hub-name {
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.1em;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.ecosystem__hub-subtitle {
+  font-size: 0.625rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Product Nodes
+   -------------------------------------------------------------------------- */
+
+.ecosystem__nodes {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  z-index: 1;
+}
+
+.ecosystem-node {
+  --node-accent: var(--color-accent);
+  --node-accent-muted: rgba(216, 216, 216, 0.12);
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 148px;
+  padding: var(--space-4) var(--space-3);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ecosystem-node:hover,
+.ecosystem-node:focus-visible {
+  transform: translate3d(0, -4px, 0);
+  border-color: var(--node-accent);
+  background-color: var(--color-card);
+  outline: none;
+}
+
+.ecosystem-node--korteks {
+  --node-accent: #7A9BB8;
+  --node-accent-muted: rgba(122, 155, 184, 0.14);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ecosystem-node--korteks:hover,
+.ecosystem-node--korteks:focus-visible {
+  transform: translate3d(-50%, -4px, 0);
+}
+
+.ecosystem-node--esref {
+  --node-accent: #C4AD78;
+  --node-accent-muted: rgba(196, 173, 120, 0.14);
+  bottom: 8%;
+  left: 0;
+}
+
+.ecosystem-node--heros {
+  --node-accent: #7FA88E;
+  --node-accent-muted: rgba(127, 168, 142, 0.14);
+  bottom: 8%;
+  right: 0;
+}
+
+.ecosystem-node__logo {
+  width: 32px;
+  height: 32px;
+  background-color: var(--node-accent-muted);
+  border: 1px solid var(--node-accent);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: border-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ecosystem-node:hover .ecosystem-node__logo,
+.ecosystem-node:focus-visible .ecosystem-node__logo {
+  border-color: color-mix(in srgb, var(--node-accent) 75%, white 25%);
+}
+
+.ecosystem-node__name {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.ecosystem-node__category {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.ecosystem-node__status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--node-accent);
+}
+
+.ecosystem-node__status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--node-accent);
+  opacity: 0.85;
+  transition: opacity 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ecosystem-node:hover .ecosystem-node__status-dot,
+.ecosystem-node:focus-visible .ecosystem-node__status-dot {
+  opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. Mobile Timeline
+   -------------------------------------------------------------------------- */
+
+.ecosystem__timeline {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 320px;
+  margin-inline: auto;
+}
+
+.ecosystem__timeline-connector {
+  display: block;
+  width: 1px;
+  height: var(--space-5);
+  background-color: var(--color-border);
+  flex-shrink: 0;
+}
+
+.ecosystem__timeline .ecosystem__hub {
+  position: static;
+  transform: none;
+  width: 136px;
+  height: 136px;
+}
+
+.ecosystem__timeline .ecosystem-node {
+  position: static;
+  width: 100%;
+  max-width: 280px;
+  transform: none;
+}
+
+.ecosystem__timeline .ecosystem-node:hover,
+.ecosystem__timeline .ecosystem-node:focus-visible {
+  transform: translate3d(0, -4px, 0);
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Scroll Reveal Stagger
+   -------------------------------------------------------------------------- */
+
+.ecosystem__eyebrow.motion-reveal {
+  transition-delay: 0ms;
+}
+
+.ecosystem__title.motion-reveal {
+  transition-delay: 80ms;
+}
+
+.ecosystem__intro.motion-reveal {
+  transition-delay: 160ms;
+}
+
+.ecosystem__diagram.motion-reveal,
+.ecosystem__timeline.motion-reveal {
+  transition-delay: 280ms;
+}
+
+.ecosystem__hub.motion-reveal {
+  transition-delay: 360ms;
+}
+
+.ecosystem__timeline > .ecosystem-node:nth-child(3).motion-reveal {
+  transition-delay: 440ms;
+}
+
+.ecosystem__timeline > .ecosystem-node:nth-child(5).motion-reveal {
+  transition-delay: 520ms;
+}
+
+.ecosystem__timeline > .ecosystem-node:nth-child(7).motion-reveal {
+  transition-delay: 600ms;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .section--roadmap {
+    padding-block: var(--space-9) var(--space-8);
+  }
+
+  .ecosystem__diagram {
+    max-width: 560px;
+    min-height: 380px;
+  }
+
+  .ecosystem__line--korteks {
+    width: 100px;
+  }
+
+  .ecosystem__line--esref,
+  .ecosystem__line--heros {
+    width: 148px;
+  }
+
+  .ecosystem-node {
+    width: 132px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecosystem__header {
+    margin-bottom: var(--space-8);
+    text-align: left;
+  }
+
+  .ecosystem__intro {
+    margin-inline: 0;
+  }
+
+  .ecosystem__diagram {
+    display: none;
+  }
+
+  .ecosystem__timeline {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .section--roadmap {
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  .ecosystem__header {
+    margin-bottom: var(--space-7);
+  }
+
+  .ecosystem__timeline .ecosystem-node {
+    padding: var(--space-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecosystem-node:hover,
+  .ecosystem-node:focus-visible,
+  .ecosystem__timeline .ecosystem-node:hover,
+  .ecosystem__timeline .ecosystem-node:focus-visible {
+    transform: none;
+  }
+
+  .ecosystem-node--korteks:hover,
+  .ecosystem-node--korteks:focus-visible {
+    transform: translateX(-50%);
+  }
+}

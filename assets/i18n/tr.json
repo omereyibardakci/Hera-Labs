@@ -148,9 +148,22 @@
       }
     }
   },
+  "ecosystem": {
+    "sectionLabel": "Ürün Ekosistemi",
+    "eyebrow": "EKOSİSTEM",
+    "title": {
+      "line1": "Farklı ürünler.",
+      "line2": "Tek bir vizyon."
+    },
+    "intro": "Her Hera Labs uygulaması bağımsız olarak geliştirilir — ancak hepsi çalışmamızı tanımlayan aynı felsefeyi, mühendislik standartlarını ve tasarım ilkelerini takip eder.",
+    "diagram": "Hera Labs ürün ekosistemi",
+    "center": {
+      "subtitle": "Yazılım Stüdyosu"
+    }
+  },
   "sections": {
     "technology": "Mühendislik",
-    "roadmap": "Yol Haritası",
+    "roadmap": "Ürün Ekosistemi",
     "contact": "İletişim"
   },
   "footer": {

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="assets/css/products.css">
   <link rel="stylesheet" href="assets/css/philosophy.css">
   <link rel="stylesheet" href="assets/css/engineering.css">
+  <link rel="stylesheet" href="assets/css/ecosystem.css">
 </head>
 <body>
 
@@ -375,9 +376,121 @@
       </div>
     </section>
 
-    <section id="roadmap" class="section section--roadmap" data-i18n-aria-label="sections.roadmap">
+    <section id="roadmap" class="section section--roadmap" aria-labelledby="ecosystem-heading">
       <div class="container">
-        <div class="section__placeholder motion-reveal" aria-hidden="true"></div>
+
+        <header class="ecosystem__header">
+          <p class="ecosystem__eyebrow motion-reveal" data-i18n="ecosystem.eyebrow">ECOSYSTEM</p>
+          <h2 class="ecosystem__title motion-reveal" id="ecosystem-heading">
+            <span data-i18n="ecosystem.title.line1">Different products.</span><br>
+            <span data-i18n="ecosystem.title.line2">One vision.</span>
+          </h2>
+          <p class="ecosystem__intro motion-reveal" data-i18n="ecosystem.intro">Every Hera Labs application is built independently — yet each one follows the same philosophy, engineering standards and design principles that define our work.</p>
+        </header>
+
+        <!-- Desktop: Triangle composition -->
+        <div class="ecosystem__diagram motion-reveal" data-i18n-aria-label="ecosystem.diagram">
+
+          <div class="ecosystem__lines" aria-hidden="true">
+            <span class="ecosystem__line ecosystem__line--korteks"></span>
+            <span class="ecosystem__line ecosystem__line--esref"></span>
+            <span class="ecosystem__line ecosystem__line--heros"></span>
+          </div>
+
+          <div class="ecosystem__hub motion-reveal">
+            <div class="ecosystem__hub-logo" aria-hidden="true"></div>
+            <p class="ecosystem__hub-name" data-i18n="brand.name">HERA LABS</p>
+            <p class="ecosystem__hub-subtitle" data-i18n="ecosystem.center.subtitle">Software Studio</p>
+          </div>
+
+          <ul class="ecosystem__nodes">
+
+            <li>
+              <a href="#products" class="ecosystem-node ecosystem-node--korteks">
+                <div class="ecosystem-node__logo" aria-hidden="true"></div>
+                <span class="ecosystem-node__name" data-i18n="hero.cards.korteks.name">Korteks</span>
+                <span class="ecosystem-node__category" data-i18n="hero.cards.korteks.category">Education</span>
+                <span class="ecosystem-node__status">
+                  <span class="ecosystem-node__status-dot" aria-hidden="true"></span>
+                  <span data-i18n="status.available">Available</span>
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#products" class="ecosystem-node ecosystem-node--esref">
+                <div class="ecosystem-node__logo" aria-hidden="true"></div>
+                <span class="ecosystem-node__name" data-i18n="hero.cards.esref.name">Eşref Saati</span>
+                <span class="ecosystem-node__category" data-i18n="hero.cards.esref.category">Lifestyle</span>
+                <span class="ecosystem-node__status">
+                  <span class="ecosystem-node__status-dot" aria-hidden="true"></span>
+                  <span data-i18n="status.available">Available</span>
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#products" class="ecosystem-node ecosystem-node--heros">
+                <div class="ecosystem-node__logo" aria-hidden="true"></div>
+                <span class="ecosystem-node__name" data-i18n="hero.cards.heros.name">Heros</span>
+                <span class="ecosystem-node__category" data-i18n="hero.cards.heros.category">Community</span>
+                <span class="ecosystem-node__status">
+                  <span class="ecosystem-node__status-dot" aria-hidden="true"></span>
+                  <span data-i18n="status.comingSoon">Coming Soon</span>
+                </span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Mobile: Vertical timeline -->
+        <div class="ecosystem__timeline motion-reveal" data-i18n-aria-label="ecosystem.diagram">
+
+          <div class="ecosystem__hub motion-reveal">
+            <div class="ecosystem__hub-logo" aria-hidden="true"></div>
+            <p class="ecosystem__hub-name" data-i18n="brand.name">HERA LABS</p>
+            <p class="ecosystem__hub-subtitle" data-i18n="ecosystem.center.subtitle">Software Studio</p>
+          </div>
+
+          <span class="ecosystem__timeline-connector" aria-hidden="true"></span>
+
+          <a href="#products" class="ecosystem-node ecosystem-node--korteks motion-reveal">
+            <div class="ecosystem-node__logo" aria-hidden="true"></div>
+            <span class="ecosystem-node__name" data-i18n="hero.cards.korteks.name">Korteks</span>
+            <span class="ecosystem-node__category" data-i18n="hero.cards.korteks.category">Education</span>
+            <span class="ecosystem-node__status">
+              <span class="ecosystem-node__status-dot" aria-hidden="true"></span>
+              <span data-i18n="status.available">Available</span>
+            </span>
+          </a>
+
+          <span class="ecosystem__timeline-connector" aria-hidden="true"></span>
+
+          <a href="#products" class="ecosystem-node ecosystem-node--esref motion-reveal">
+            <div class="ecosystem-node__logo" aria-hidden="true"></div>
+            <span class="ecosystem-node__name" data-i18n="hero.cards.esref.name">Eşref Saati</span>
+            <span class="ecosystem-node__category" data-i18n="hero.cards.esref.category">Lifestyle</span>
+            <span class="ecosystem-node__status">
+              <span class="ecosystem-node__status-dot" aria-hidden="true"></span>
+              <span data-i18n="status.available">Available</span>
+            </span>
+          </a>
+
+          <span class="ecosystem__timeline-connector" aria-hidden="true"></span>
+
+          <a href="#products" class="ecosystem-node ecosystem-node--heros motion-reveal">
+            <div class="ecosystem-node__logo" aria-hidden="true"></div>
+            <span class="ecosystem-node__name" data-i18n="hero.cards.heros.name">Heros</span>
+            <span class="ecosystem-node__category" data-i18n="hero.cards.heros.category">Community</span>
+            <span class="ecosystem-node__status">
+              <span class="ecosystem-node__status-dot" aria-hidden="true"></span>
+              <span data-i18n="status.comingSoon">Coming Soon</span>
+            </span>
+          </a>
+
+        </div>
+
       </div>
     </section>
 
