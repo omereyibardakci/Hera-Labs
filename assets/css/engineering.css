@@ -1,0 +1,248 @@
+/* ==========================================================================
+   HERA LABS — Engineering Section
+   Phase 06: Engineering Principles
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Section Layout
+   -------------------------------------------------------------------------- */
+
+.section--technology {
+  padding-block: var(--space-10) var(--space-9);
+  border-top: 1px solid rgba(43, 43, 43, 0.4);
+}
+
+.engineering__header {
+  max-width: 640px;
+  margin-bottom: var(--space-8);
+}
+
+.engineering__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.engineering__title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+  max-width: 14ch;
+}
+
+.engineering__intro {
+  font-size: clamp(var(--font-size-base), 1.5vw, var(--font-size-lg));
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 52ch;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Principles Grid
+   -------------------------------------------------------------------------- */
+
+.engineering__principles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  list-style: none;
+}
+
+.engineering__principles-item {
+  display: flex;
+  min-width: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Principle Cards
+   -------------------------------------------------------------------------- */
+
+.engineering-principle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.engineering-principle:hover {
+  transform: translate3d(0, -2px, 0);
+  border-color: var(--color-accent);
+  background-color: var(--color-card);
+}
+
+.engineering-principle__accent {
+  display: block;
+  margin-bottom: var(--space-5);
+  opacity: 0.45;
+  flex-shrink: 0;
+}
+
+/* Blueprint line */
+.engineering-principle__accent--blueprint {
+  width: 28px;
+  height: 18px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.engineering-principle__accent--blueprint::before,
+.engineering-principle__accent--blueprint::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  height: 1px;
+  background-color: var(--color-accent);
+}
+
+.engineering-principle__accent--blueprint::before {
+  top: 6px;
+}
+
+.engineering-principle__accent--blueprint::after {
+  bottom: 5px;
+  left: 5px;
+  right: 10px;
+}
+
+/* Pulse indicator */
+.engineering-principle__accent--pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(216, 216, 216, 0.12);
+}
+
+/* Focus ring symbol */
+.engineering-principle__accent--focus {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-accent);
+  border-radius: 2px;
+  box-shadow:
+    0 0 0 2px var(--color-surface),
+    0 0 0 3px rgba(216, 216, 216, 0.35);
+}
+
+/* Grid symbol */
+.engineering-principle__accent--grid {
+  width: 14px;
+  height: 14px;
+  background-image:
+    linear-gradient(var(--color-accent) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-accent) 1px, transparent 1px);
+  background-size: 7px 7px;
+  background-position: -0.5px -0.5px;
+}
+
+.engineering-principle__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.engineering-principle__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Scroll Reveal Stagger
+   -------------------------------------------------------------------------- */
+
+.engineering__eyebrow.motion-reveal {
+  transition-delay: 0ms;
+}
+
+.engineering__title.motion-reveal {
+  transition-delay: 80ms;
+}
+
+.engineering__intro.motion-reveal {
+  transition-delay: 160ms;
+}
+
+.engineering__principles-item:nth-child(1) .engineering-principle.motion-reveal {
+  transition-delay: 240ms;
+}
+
+.engineering__principles-item:nth-child(2) .engineering-principle.motion-reveal {
+  transition-delay: 320ms;
+}
+
+.engineering__principles-item:nth-child(3) .engineering-principle.motion-reveal {
+  transition-delay: 400ms;
+}
+
+.engineering__principles-item:nth-child(4) .engineering-principle.motion-reveal {
+  transition-delay: 480ms;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .section--technology {
+    padding-block: var(--space-9) var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .engineering__header {
+    margin-bottom: var(--space-7);
+  }
+
+  .engineering__title {
+    max-width: none;
+  }
+
+  .engineering__principles {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .section--technology {
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  .engineering__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .engineering-principle {
+    padding: var(--space-5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .engineering-principle:hover {
+    transform: none;
+  }
+}

@@ -121,8 +121,35 @@
       }
     }
   },
+  "engineering": {
+    "sectionLabel": "Engineering",
+    "eyebrow": "ENGINEERING",
+    "title": {
+      "line1": "Built with",
+      "line2": "intention."
+    },
+    "intro": "Every Hera Labs product follows the same engineering standards — designed for maintainability, performance, accessibility and experiences that feel considered at every level.",
+    "principles": {
+      "maintainable": {
+        "title": "Maintainable Architecture",
+        "description": "Every project is designed to remain understandable, scalable and easy to evolve over time."
+      },
+      "performance": {
+        "title": "Performance First",
+        "description": "Fast interfaces and smooth interactions are considered fundamental—not optional."
+      },
+      "accessibility": {
+        "title": "Accessibility Matters",
+        "description": "Interfaces are designed to be usable, readable and inclusive across devices and interaction methods."
+      },
+      "consistency": {
+        "title": "Consistency by Design",
+        "description": "Shared design systems and reusable components create a coherent experience across every product."
+      }
+    }
+  },
   "sections": {
-    "technology": "Technology",
+    "technology": "Engineering",
     "roadmap": "Roadmap",
     "contact": "Contact"
   },

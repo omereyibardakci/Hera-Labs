@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/css/motion.css">
   <link rel="stylesheet" href="assets/css/products.css">
   <link rel="stylesheet" href="assets/css/philosophy.css">
+  <link rel="stylesheet" href="assets/css/engineering.css">
 </head>
 <body>
 
@@ -323,9 +324,54 @@
       </div>
     </section>
 
-    <section id="technology" class="section section--technology" data-i18n-aria-label="sections.technology">
+    <section id="technology" class="section section--technology" aria-labelledby="engineering-heading">
       <div class="container">
-        <div class="section__placeholder motion-reveal" aria-hidden="true"></div>
+
+        <header class="engineering__header">
+          <p class="engineering__eyebrow motion-reveal" data-i18n="engineering.eyebrow">ENGINEERING</p>
+          <h2 class="engineering__title motion-reveal" id="engineering-heading">
+            <span data-i18n="engineering.title.line1">Built with</span><br>
+            <span data-i18n="engineering.title.line2">intention.</span>
+          </h2>
+          <p class="engineering__intro motion-reveal" data-i18n="engineering.intro">Every Hera Labs product follows the same engineering standards — designed for maintainability, performance, accessibility and experiences that feel considered at every level.</p>
+        </header>
+
+        <ul class="engineering__principles">
+
+          <li class="engineering__principles-item">
+            <article class="engineering-principle motion-reveal">
+              <span class="engineering-principle__accent engineering-principle__accent--blueprint" aria-hidden="true"></span>
+              <h3 class="engineering-principle__title" data-i18n="engineering.principles.maintainable.title">Maintainable Architecture</h3>
+              <p class="engineering-principle__text" data-i18n="engineering.principles.maintainable.description">Every project is designed to remain understandable, scalable and easy to evolve over time.</p>
+            </article>
+          </li>
+
+          <li class="engineering__principles-item">
+            <article class="engineering-principle motion-reveal">
+              <span class="engineering-principle__accent engineering-principle__accent--pulse" aria-hidden="true"></span>
+              <h3 class="engineering-principle__title" data-i18n="engineering.principles.performance.title">Performance First</h3>
+              <p class="engineering-principle__text" data-i18n="engineering.principles.performance.description">Fast interfaces and smooth interactions are considered fundamental—not optional.</p>
+            </article>
+          </li>
+
+          <li class="engineering__principles-item">
+            <article class="engineering-principle motion-reveal">
+              <span class="engineering-principle__accent engineering-principle__accent--focus" aria-hidden="true"></span>
+              <h3 class="engineering-principle__title" data-i18n="engineering.principles.accessibility.title">Accessibility Matters</h3>
+              <p class="engineering-principle__text" data-i18n="engineering.principles.accessibility.description">Interfaces are designed to be usable, readable and inclusive across devices and interaction methods.</p>
+            </article>
+          </li>
+
+          <li class="engineering__principles-item">
+            <article class="engineering-principle motion-reveal">
+              <span class="engineering-principle__accent engineering-principle__accent--grid" aria-hidden="true"></span>
+              <h3 class="engineering-principle__title" data-i18n="engineering.principles.consistency.title">Consistency by Design</h3>
+              <p class="engineering-principle__text" data-i18n="engineering.principles.consistency.description">Shared design systems and reusable components create a coherent experience across every product.</p>
+            </article>
+          </li>
+
+        </ul>
+
       </div>
     </section>
 

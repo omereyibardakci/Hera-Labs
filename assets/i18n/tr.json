@@ -121,8 +121,35 @@
       }
     }
   },
+  "engineering": {
+    "sectionLabel": "Mühendislik",
+    "eyebrow": "MÜHENDİSLİK",
+    "title": {
+      "line1": "Bilinçle",
+      "line2": "inşa edildi."
+    },
+    "intro": "Her Hera Labs ürünü aynı mühendislik standartlarını takip eder — sürdürülebilirlik, performans, erişilebilirlik ve her aşamada düşünülmüş deneyimler için tasarlanır.",
+    "principles": {
+      "maintainable": {
+        "title": "Sürdürülebilir Mimari",
+        "description": "Her proje, zaman içinde anlaşılır, ölçeklenebilir ve geliştirilmeye açık kalacak şekilde tasarlanır."
+      },
+      "performance": {
+        "title": "Performans Önceliği",
+        "description": "Hızlı arayüzler ve akıcı etkileşimler temel gereksinimlerdir — isteğe bağlı değildir."
+      },
+      "accessibility": {
+        "title": "Erişilebilirlik Önemlidir",
+        "description": "Arayüzler; cihazlar ve etkileşim yöntemleri genelinde kullanılabilir, okunabilir ve kapsayıcı olacak şekilde tasarlanır."
+      },
+      "consistency": {
+        "title": "Tasarımla Tutarlılık",
+        "description": "Paylaşılan tasarım sistemleri ve yeniden kullanılabilir bileşenler, her üründe tutarlı bir deneyim oluşturur."
+      }
+    }
+  },
   "sections": {
-    "technology": "Teknoloji",
+    "technology": "Mühendislik",
     "roadmap": "Yol Haritası",
     "contact": "İletişim"
   },
