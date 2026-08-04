@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "Hera Labs",
+    "description": "Hera Labs — Özenle tasarlanmış mobil uygulamalar. Hassasiyetle inşa edildi."
+  },
+  "brand": {
+    "name": "HERA LABS"
+  },
+  "navigation": {
+    "primary": "Ana navigasyon",
+    "about": "Felsefe",
+    "products": "Ürünler",
+    "technology": "Teknoloji",
+    "roadmap": "Yol Haritası",
+    "contact": "İletişim",
+    "logoHome": "Hera Labs — Ana Sayfa",
+    "openMenu": "Menüyü aç"
+  },
+  "language": {
+    "selection": "Dil seçimi",
+    "turkish": "Türkçe",
+    "english": "İngilizce"
+  },
+  "theme": {
+    "toggle": "Karanlık / aydınlık modu değiştir"
+  },
+  "status": {
+    "available": "Yayında",
+    "comingSoon": "Yakında"
+  },
+  "store": {
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "hero": {
+    "eyebrow": "HERA LABS",
+    "title": {
+      "line1": "Özenle tasarlanmış",
+      "line2": "dijital ürünler."
+    },
+    "description": "Hera Labs; sadeleşme, performans ve anlamlı kullanıcı deneyimlerine odaklanan, özenle tasarlanmış mobil uygulamalar geliştirir.",
+    "buttons": {
+      "exploreProducts": "Ürünleri Keşfet",
+      "learnMore": "Daha Fazla Bilgi"
+    },
+    "showcase": "Öne çıkan ürünler",
+    "scrollToAbout": "Felsefe bölümüne kaydır",
+    "cards": {
+      "korteks": {
+        "name": "Korteks",
+        "category": "Eğitim"
+      },
+      "esref": {
+        "name": "Eşref Saati",
+        "category": "Yaşam Tarzı"
+      },
+      "heros": {
+        "name": "Heros",
+        "category": "Topluluk"
+      }
+    }
+  },
+  "philosophy": {
+    "sectionLabel": "Felsefe",
+    "eyebrow": "FELSEFE",
+    "title": {
+      "line1": "Yerini hak eden",
+      "line2": "yazılımlar geliştiriyoruz."
+    },
+    "intro": "Her uygulama gerçek bir problemle başlar. Çok sayıda özellik eklemek yerine, yıllarca faydalı kalacak ürünler oluşturmaya odaklanırız.",
+    "values": {
+      "purpose": {
+        "title": "Özelliklerden önce amaç",
+        "description": "Her karar, bir özellik daha eklemekle değil, anlamlı bir problemi çözmekle başlar."
+      },
+      "craft": {
+        "title": "Özenle tasarlandı",
+        "description": "Detaylara gösterilen özen, düşünceli tasarım ve tutarlı performans geliştirdiğimiz her ürünü tanımlar."
+      },
+      "lasting": {
+        "title": "Kalıcı olmak için",
+        "description": "Hedefimiz kısa vadeli trendler değil, insanların zaman içinde güvenmeye devam edeceği yazılımlardır."
+      }
+    }
+  },
+  "products": {
+    "sectionLabel": "Ürünler",
+    "eyebrow": "ÜRÜNLER",
+    "title": {
+      "line1": "Hassasiyetle tasarlanmış",
+      "line2": "ürünler."
+    },
+    "intro": "Geliştirdiğimiz her uygulama kalıcı olmak için tasarlanır — netlik, performans ve kullananlara saygı duyan deneyimlere odaklanır.",
+    "items": {
+      "korteks": {
+        "name": "Korteks",
+        "category": "Eğitim",
+        "description": "Deneme sınavlarını takip edin, performansı analiz edin ve anlamlı istatistiklerle akademik ilerlemenizi izleyin.",
+        "store": {
+          "appStore": "Korteks App Store'da — yakında",
+          "googlePlay": "Korteks Google Play'de — yakında"
+        }
+      },
+      "esref": {
+        "name": "Eşref Saati",
+        "category": "Yaşam Tarzı",
+        "description": "Sakin ve özenle tasarlanmış bir manevi zaman deneyimiyle anlamlı anları keşfedin.",
+        "store": {
+          "appStore": "Eşref Saati App Store'da — yakında",
+          "googlePlay": "Eşref Saati Google Play'de — yakında"
+        }
+      },
+      "heros": {
+        "name": "Heros",
+        "category": "Topluluk",
+        "description": "Kayıp ve sahiplendirilmeye açık evcil hayvanların modern bir topluluk platformu aracılığıyla aileleriyle yeniden buluşmasına yardımcı olur.",
+        "store": {
+          "appStore": "Heros App Store'da — yakında",
+          "googlePlay": "Heros Google Play'de — yakında"
+        }
+      }
+    }
+  },
+  "sections": {
+    "technology": "Teknoloji",
+    "roadmap": "Yol Haritası",
+    "contact": "İletişim"
+  },
+  "footer": {
+    "copyright": "© Hera Labs",
+    "tagline": "Hassasiyetle inşa edildi."
+  }
+}

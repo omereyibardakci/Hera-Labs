@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hera Labs — Premium software engineering. Built with precision.">
+  <meta name="description" content="Hera Labs — Carefully crafted mobile applications. Built with precision.">
   <meta name="theme-color" content="#090909">
   <title>Hera Labs</title>
   <link rel="stylesheet" href="assets/css/style.css">
@@ -19,19 +19,19 @@
     <div class="container header__inner">
 
       <!-- Logo -->
-      <a href="#" class="header__logo" aria-label="Hera Labs — Home">
+      <a href="#" class="header__logo" data-i18n-aria="navigation.logoHome">
         <span class="header__logo-mark" aria-hidden="true"></span>
-        <span class="header__logo-text">HERA LABS</span>
+        <span class="header__logo-text" data-i18n="brand.name">HERA LABS</span>
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="header__nav" aria-label="Primary navigation">
+      <nav class="header__nav" data-i18n-aria-label="navigation.primary">
         <ul class="header__nav-list">
-          <li><a href="#about" class="header__nav-link">About</a></li>
-          <li><a href="#products" class="header__nav-link">Products</a></li>
-          <li><a href="#technology" class="header__nav-link">Technology</a></li>
-          <li><a href="#roadmap" class="header__nav-link">Roadmap</a></li>
-          <li><a href="#contact" class="header__nav-link">Contact</a></li>
+          <li><a href="#about" class="header__nav-link" data-i18n="navigation.about">About</a></li>
+          <li><a href="#products" class="header__nav-link" data-i18n="navigation.products">Products</a></li>
+          <li><a href="#technology" class="header__nav-link" data-i18n="navigation.technology">Technology</a></li>
+          <li><a href="#roadmap" class="header__nav-link" data-i18n="navigation.roadmap">Roadmap</a></li>
+          <li><a href="#contact" class="header__nav-link" data-i18n="navigation.contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -39,14 +39,14 @@
       <div class="header__actions">
 
         <!-- Language Switch -->
-        <div class="lang-switch" role="group" aria-label="Language selection">
-          <button type="button" class="lang-switch__btn lang-switch__btn--active" aria-pressed="true" aria-label="Turkish">TR</button>
+        <div class="lang-switch" role="group" data-i18n-aria-label="language.selection">
+          <button type="button" class="lang-switch__btn" data-lang="tr" aria-pressed="false" data-i18n-aria="language.turkish">TR</button>
           <span class="lang-switch__divider" aria-hidden="true"></span>
-          <button type="button" class="lang-switch__btn" aria-pressed="false" aria-label="English">EN</button>
+          <button type="button" class="lang-switch__btn lang-switch__btn--active" data-lang="en" aria-pressed="true" data-i18n-aria="language.english">EN</button>
         </div>
 
         <!-- Theme Toggle -->
-        <button type="button" class="theme-toggle" aria-label="Toggle dark / light mode">
+        <button type="button" class="theme-toggle" data-i18n-aria="theme.toggle">
           <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.25"/>
@@ -61,7 +61,7 @@
         </button>
 
         <!-- Mobile Menu Toggle (layout only) -->
-        <button type="button" class="header__menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <button type="button" class="header__menu-toggle" data-i18n-aria="navigation.openMenu" aria-expanded="false" aria-controls="mobile-menu">
           <span class="header__menu-bar" aria-hidden="true"></span>
           <span class="header__menu-bar" aria-hidden="true"></span>
         </button>
@@ -85,29 +85,29 @@
 
           <!-- Left Column -->
           <div class="hero__content">
-            <p class="hero__eyebrow motion-on-load motion-fade-up motion-load-eyebrow">HERA LABS</p>
+            <p class="hero__eyebrow motion-on-load motion-fade-up motion-load-eyebrow" data-i18n="hero.eyebrow">HERA LABS</p>
             <h1 class="hero__title" id="hero-heading">
-              <span class="motion-line motion-load-line-1"><span class="motion-line__inner">Crafting thoughtful</span></span>
-              <span class="motion-line motion-load-line-2"><span class="motion-line__inner">digital products.</span></span>
+              <span class="motion-line motion-load-line-1"><span class="motion-line__inner" data-i18n="hero.title.line1">Crafting thoughtful</span></span>
+              <span class="motion-line motion-load-line-2"><span class="motion-line__inner" data-i18n="hero.title.line2">digital products.</span></span>
             </h1>
-            <p class="hero__description motion-on-load motion-fade-up motion-load-description">Hera Labs creates carefully designed mobile applications focused on simplicity, performance and meaningful user experiences.</p>
+            <p class="hero__description motion-on-load motion-fade-up motion-load-description" data-i18n="hero.description">Hera Labs creates carefully designed mobile applications focused on simplicity, performance and meaningful user experiences.</p>
             <div class="hero__actions">
-              <a href="#products" class="btn btn--primary motion-on-load motion-slide-up motion-load-btn-1">Explore Products</a>
-              <a href="#about" class="btn btn--secondary motion-on-load motion-slide-up motion-load-btn-2">Learn More</a>
+              <a href="#products" class="btn btn--primary motion-on-load motion-slide-up motion-load-btn-1" data-i18n="hero.buttons.exploreProducts">Explore Products</a>
+              <a href="#about" class="btn btn--secondary motion-on-load motion-slide-up motion-load-btn-2" data-i18n="hero.buttons.learnMore">Learn More</a>
             </div>
           </div>
 
           <!-- Right Column -->
-          <div class="hero__showcase" aria-label="Featured products">
+          <div class="hero__showcase" data-i18n-aria-label="hero.showcase">
             <ul class="hero__cards">
 
               <li class="hero__cards-item hero__cards-item--1 motion-on-load motion-scale-in motion-load-card-1">
                 <article class="product-card product-card--korteks">
                   <div class="product-card__icon" aria-hidden="true"></div>
                   <div class="product-card__content">
-                    <h2 class="product-card__name">Korteks</h2>
-                    <p class="product-card__category">Education</p>
-                    <span class="product-card__badge">Available</span>
+                    <h2 class="product-card__name" data-i18n="hero.cards.korteks.name">Korteks</h2>
+                    <p class="product-card__category" data-i18n="hero.cards.korteks.category">Education</p>
+                    <span class="product-card__badge" data-i18n="status.available">Available</span>
                   </div>
                   <span class="product-card__arrow" aria-hidden="true">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,9 +121,9 @@
                 <article class="product-card product-card--esref">
                   <div class="product-card__icon" aria-hidden="true"></div>
                   <div class="product-card__content">
-                    <h2 class="product-card__name">Eşref Saati</h2>
-                    <p class="product-card__category">Lifestyle</p>
-                    <span class="product-card__badge">Available</span>
+                    <h2 class="product-card__name" data-i18n="hero.cards.esref.name">Eşref Saati</h2>
+                    <p class="product-card__category" data-i18n="hero.cards.esref.category">Lifestyle</p>
+                    <span class="product-card__badge" data-i18n="status.available">Available</span>
                   </div>
                   <span class="product-card__arrow" aria-hidden="true">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -137,9 +137,9 @@
                 <article class="product-card product-card--heros">
                   <div class="product-card__icon" aria-hidden="true"></div>
                   <div class="product-card__content">
-                    <h2 class="product-card__name">Heros</h2>
-                    <p class="product-card__category">Community</p>
-                    <span class="product-card__badge product-card__badge--soon">Coming Soon</span>
+                    <h2 class="product-card__name" data-i18n="hero.cards.heros.name">Heros</h2>
+                    <p class="product-card__category" data-i18n="hero.cards.heros.category">Community</p>
+                    <span class="product-card__badge product-card__badge--soon" data-i18n="status.comingSoon">Coming Soon</span>
                   </div>
                   <span class="product-card__arrow" aria-hidden="true">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +155,7 @@
         </div>
       </div>
 
-      <a href="#about" class="hero__scroll motion-on-load motion-load-scroll" aria-label="Scroll to About section">
+      <a href="#about" class="hero__scroll motion-on-load motion-load-scroll" data-i18n-aria="hero.scrollToAbout">
         <span class="hero__scroll-track" aria-hidden="true">
           <span class="hero__scroll-thumb"></span>
         </span>
@@ -166,9 +166,12 @@
       <div class="container">
 
         <header class="philosophy__header">
-          <p class="philosophy__eyebrow motion-reveal">PHILOSOPHY</p>
-          <h2 class="philosophy__title motion-reveal" id="philosophy-heading">We build software<br>that earns its place.</h2>
-          <p class="philosophy__intro motion-reveal">Every application starts with a real problem. Instead of building many features, we focus on creating products that remain useful for years.</p>
+          <p class="philosophy__eyebrow motion-reveal" data-i18n="philosophy.eyebrow">PHILOSOPHY</p>
+          <h2 class="philosophy__title motion-reveal" id="philosophy-heading">
+            <span data-i18n="philosophy.title.line1">We build software</span><br>
+            <span data-i18n="philosophy.title.line2">that earns its place.</span>
+          </h2>
+          <p class="philosophy__intro motion-reveal" data-i18n="philosophy.intro">Every application starts with a real problem. Instead of building many features, we focus on creating products that remain useful for years.</p>
         </header>
 
         <ul class="philosophy__values">
@@ -176,24 +179,24 @@
           <li class="philosophy__values-item">
             <article class="philosophy-value motion-reveal">
               <span class="philosophy-value__accent philosophy-value__accent--line" aria-hidden="true"></span>
-              <h3 class="philosophy-value__title">Purpose before features</h3>
-              <p class="philosophy-value__text">Every decision begins with solving a meaningful problem—not adding another feature.</p>
+              <h3 class="philosophy-value__title" data-i18n="philosophy.values.purpose.title">Purpose before features</h3>
+              <p class="philosophy-value__text" data-i18n="philosophy.values.purpose.description">Every decision begins with solving a meaningful problem—not adding another feature.</p>
             </article>
           </li>
 
           <li class="philosophy__values-item">
             <article class="philosophy-value motion-reveal">
               <span class="philosophy-value__accent philosophy-value__accent--circle" aria-hidden="true"></span>
-              <h3 class="philosophy-value__title">Crafted with care</h3>
-              <p class="philosophy-value__text">Attention to detail, thoughtful design and consistent performance define every product we build.</p>
+              <h3 class="philosophy-value__title" data-i18n="philosophy.values.craft.title">Crafted with care</h3>
+              <p class="philosophy-value__text" data-i18n="philosophy.values.craft.description">Attention to detail, thoughtful design and consistent performance define every product we build.</p>
             </article>
           </li>
 
           <li class="philosophy__values-item">
             <article class="philosophy-value motion-reveal">
               <span class="philosophy-value__accent philosophy-value__accent--square" aria-hidden="true"></span>
-              <h3 class="philosophy-value__title">Built to last</h3>
-              <p class="philosophy-value__text">Our goal is not short-term trends, but software that people continue to trust over time.</p>
+              <h3 class="philosophy-value__title" data-i18n="philosophy.values.lasting.title">Built to last</h3>
+              <p class="philosophy-value__text" data-i18n="philosophy.values.lasting.description">Our goal is not short-term trends, but software that people continue to trust over time.</p>
             </article>
           </li>
 
@@ -206,9 +209,12 @@
       <div class="container">
 
         <header class="products__header">
-          <p class="products__eyebrow motion-reveal">PRODUCTS</p>
-          <h2 class="products__title motion-reveal" id="products-heading">Products crafted<br>with precision.</h2>
-          <p class="products__intro motion-reveal">Every application we build is designed to last — focused on clarity, performance and experiences that respect the people who use them.</p>
+          <p class="products__eyebrow motion-reveal" data-i18n="products.eyebrow">PRODUCTS</p>
+          <h2 class="products__title motion-reveal" id="products-heading">
+            <span data-i18n="products.title.line1">Products crafted</span><br>
+            <span data-i18n="products.title.line2">with precision.</span>
+          </h2>
+          <p class="products__intro motion-reveal" data-i18n="products.intro">Every application we build is designed to last — focused on clarity, performance and experiences that respect the people who use them.</p>
         </header>
 
         <ul class="products__grid">
@@ -217,30 +223,30 @@
             <article class="products-card products-card--korteks motion-reveal">
               <div class="products-card__top">
                 <div class="products-card__logo" aria-hidden="true"></div>
-                <span class="products-card__badge">Available</span>
+                <span class="products-card__badge" data-i18n="status.available">Available</span>
               </div>
               <div class="products-card__body">
-                <h3 class="products-card__name">Korteks</h3>
-                <p class="products-card__category">Education</p>
-                <p class="products-card__description">Track trial exams, analyze performance and monitor academic progress through meaningful statistics.</p>
+                <h3 class="products-card__name" data-i18n="products.items.korteks.name">Korteks</h3>
+                <p class="products-card__category" data-i18n="products.items.korteks.category">Education</p>
+                <p class="products-card__description" data-i18n="products.items.korteks.description">Track trial exams, analyze performance and monitor academic progress through meaningful statistics.</p>
               </div>
               <div class="products-card__footer">
-                <button type="button" class="store-btn" disabled aria-label="Korteks on the App Store — coming soon">
+                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.korteks.store.appStore">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 2.5L9.8 6.2H13.6L10.5 8.7L11.6 12.5L8 10.2L4.4 12.5L5.5 8.7L2.4 6.2H6.2L8 2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
                     </svg>
                   </span>
-                  App Store
+                  <span data-i18n="store.appStore">App Store</span>
                 </button>
-                <button type="button" class="store-btn" disabled aria-label="Korteks on Google Play — coming soon">
+                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.korteks.store.googlePlay">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3 2.5L11.5 8L3 13.5V2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
                       <path d="M3 8H11.5" stroke="currentColor" stroke-width="1.1"/>
                     </svg>
                   </span>
-                  Google Play
+                  <span data-i18n="store.googlePlay">Google Play</span>
                 </button>
               </div>
             </article>
@@ -250,30 +256,30 @@
             <article class="products-card products-card--esref motion-reveal">
               <div class="products-card__top">
                 <div class="products-card__logo" aria-hidden="true"></div>
-                <span class="products-card__badge">Available</span>
+                <span class="products-card__badge" data-i18n="status.available">Available</span>
               </div>
               <div class="products-card__body">
-                <h3 class="products-card__name">Eşref Saati</h3>
-                <p class="products-card__category">Lifestyle</p>
-                <p class="products-card__description">Discover meaningful moments through a calm and beautifully crafted spiritual timing experience.</p>
+                <h3 class="products-card__name" data-i18n="products.items.esref.name">Eşref Saati</h3>
+                <p class="products-card__category" data-i18n="products.items.esref.category">Lifestyle</p>
+                <p class="products-card__description" data-i18n="products.items.esref.description">Discover meaningful moments through a calm and beautifully crafted spiritual timing experience.</p>
               </div>
               <div class="products-card__footer">
-                <button type="button" class="store-btn" disabled aria-label="Eşref Saati on the App Store — coming soon">
+                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.esref.store.appStore">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 2.5L9.8 6.2H13.6L10.5 8.7L11.6 12.5L8 10.2L4.4 12.5L5.5 8.7L2.4 6.2H6.2L8 2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
                     </svg>
                   </span>
-                  App Store
+                  <span data-i18n="store.appStore">App Store</span>
                 </button>
-                <button type="button" class="store-btn" disabled aria-label="Eşref Saati on Google Play — coming soon">
+                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.esref.store.googlePlay">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3 2.5L11.5 8L3 13.5V2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
                       <path d="M3 8H11.5" stroke="currentColor" stroke-width="1.1"/>
                     </svg>
                   </span>
-                  Google Play
+                  <span data-i18n="store.googlePlay">Google Play</span>
                 </button>
               </div>
             </article>
@@ -283,30 +289,30 @@
             <article class="products-card products-card--heros motion-reveal">
               <div class="products-card__top">
                 <div class="products-card__logo" aria-hidden="true"></div>
-                <span class="products-card__badge">Coming Soon</span>
+                <span class="products-card__badge" data-i18n="status.comingSoon">Coming Soon</span>
               </div>
               <div class="products-card__body">
-                <h3 class="products-card__name">Heros</h3>
-                <p class="products-card__category">Community</p>
-                <p class="products-card__description">Helping lost and adoptable pets reconnect with families through a modern community platform.</p>
+                <h3 class="products-card__name" data-i18n="products.items.heros.name">Heros</h3>
+                <p class="products-card__category" data-i18n="products.items.heros.category">Community</p>
+                <p class="products-card__description" data-i18n="products.items.heros.description">Helping lost and adoptable pets reconnect with families through a modern community platform.</p>
               </div>
               <div class="products-card__footer">
-                <button type="button" class="store-btn" disabled aria-label="Heros on the App Store — coming soon">
+                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.heros.store.appStore">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 2.5L9.8 6.2H13.6L10.5 8.7L11.6 12.5L8 10.2L4.4 12.5L5.5 8.7L2.4 6.2H6.2L8 2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
                     </svg>
                   </span>
-                  App Store
+                  <span data-i18n="store.appStore">App Store</span>
                 </button>
-                <button type="button" class="store-btn" disabled aria-label="Heros on Google Play — coming soon">
+                <button type="button" class="store-btn" disabled data-i18n-aria="products.items.heros.store.googlePlay">
                   <span class="store-btn__icon" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3 2.5L11.5 8L3 13.5V2.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
                       <path d="M3 8H11.5" stroke="currentColor" stroke-width="1.1"/>
                     </svg>
                   </span>
-                  Google Play
+                  <span data-i18n="store.googlePlay">Google Play</span>
                 </button>
               </div>
             </article>
@@ -317,19 +323,19 @@
       </div>
     </section>
 
-    <section id="technology" class="section section--technology" aria-label="Technology">
+    <section id="technology" class="section section--technology" data-i18n-aria-label="sections.technology">
       <div class="container">
         <div class="section__placeholder motion-reveal" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section id="roadmap" class="section section--roadmap" aria-label="Roadmap">
+    <section id="roadmap" class="section section--roadmap" data-i18n-aria-label="sections.roadmap">
       <div class="container">
         <div class="section__placeholder motion-reveal" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section id="contact" class="section section--contact" aria-label="Contact">
+    <section id="contact" class="section section--contact" data-i18n-aria-label="sections.contact">
       <div class="container">
         <div class="section__placeholder motion-reveal" aria-hidden="true"></div>
       </div>
@@ -340,12 +346,13 @@
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; Hera Labs</p>
-      <p class="footer__tagline">Built with precision.</p>
+      <p class="footer__copy" data-i18n="footer.copyright">&copy; Hera Labs</p>
+      <p class="footer__tagline" data-i18n="footer.tagline">Built with precision.</p>
     </div>
   </footer>
 
   <script src="assets/js/app.js"></script>
   <script src="assets/js/motion.js"></script>
+  <script type="module" src="assets/js/i18n.js"></script>
 </body>
 </html>

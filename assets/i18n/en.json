@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "Hera Labs",
+    "description": "Hera Labs — Carefully crafted mobile applications. Built with precision."
+  },
+  "brand": {
+    "name": "HERA LABS"
+  },
+  "navigation": {
+    "primary": "Primary navigation",
+    "about": "About",
+    "products": "Products",
+    "technology": "Technology",
+    "roadmap": "Roadmap",
+    "contact": "Contact",
+    "logoHome": "Hera Labs — Home",
+    "openMenu": "Open menu"
+  },
+  "language": {
+    "selection": "Language selection",
+    "turkish": "Turkish",
+    "english": "English"
+  },
+  "theme": {
+    "toggle": "Toggle dark / light mode"
+  },
+  "status": {
+    "available": "Available",
+    "comingSoon": "Coming Soon"
+  },
+  "store": {
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "hero": {
+    "eyebrow": "HERA LABS",
+    "title": {
+      "line1": "Crafting thoughtful",
+      "line2": "digital products."
+    },
+    "description": "Hera Labs creates carefully designed mobile applications focused on simplicity, performance and meaningful user experiences.",
+    "buttons": {
+      "exploreProducts": "Explore Products",
+      "learnMore": "Learn More"
+    },
+    "showcase": "Featured products",
+    "scrollToAbout": "Scroll to About section",
+    "cards": {
+      "korteks": {
+        "name": "Korteks",
+        "category": "Education"
+      },
+      "esref": {
+        "name": "Eşref Saati",
+        "category": "Lifestyle"
+      },
+      "heros": {
+        "name": "Heros",
+        "category": "Community"
+      }
+    }
+  },
+  "philosophy": {
+    "sectionLabel": "Philosophy",
+    "eyebrow": "PHILOSOPHY",
+    "title": {
+      "line1": "We build software",
+      "line2": "that earns its place."
+    },
+    "intro": "Every application starts with a real problem. Instead of building many features, we focus on creating products that remain useful for years.",
+    "values": {
+      "purpose": {
+        "title": "Purpose before features",
+        "description": "Every decision begins with solving a meaningful problem—not adding another feature."
+      },
+      "craft": {
+        "title": "Crafted with care",
+        "description": "Attention to detail, thoughtful design and consistent performance define every product we build."
+      },
+      "lasting": {
+        "title": "Built to last",
+        "description": "Our goal is not short-term trends, but software that people continue to trust over time."
+      }
+    }
+  },
+  "products": {
+    "sectionLabel": "Products",
+    "eyebrow": "PRODUCTS",
+    "title": {
+      "line1": "Products crafted",
+      "line2": "with precision."
+    },
+    "intro": "Every application we build is designed to last — focused on clarity, performance and experiences that respect the people who use them.",
+    "items": {
+      "korteks": {
+        "name": "Korteks",
+        "category": "Education",
+        "description": "Track trial exams, analyze performance and monitor academic progress through meaningful statistics.",
+        "store": {
+          "appStore": "Korteks on the App Store — coming soon",
+          "googlePlay": "Korteks on Google Play — coming soon"
+        }
+      },
+      "esref": {
+        "name": "Eşref Saati",
+        "category": "Lifestyle",
+        "description": "Discover meaningful moments through a calm and beautifully crafted spiritual timing experience.",
+        "store": {
+          "appStore": "Eşref Saati on the App Store — coming soon",
+          "googlePlay": "Eşref Saati on Google Play — coming soon"
+        }
+      },
+      "heros": {
+        "name": "Heros",
+        "category": "Community",
+        "description": "Helping lost and adoptable pets reconnect with families through a modern community platform.",
+        "store": {
+          "appStore": "Heros on the App Store — coming soon",
+          "googlePlay": "Heros on Google Play — coming soon"
+        }
+      }
+    }
+  },
+  "sections": {
+    "technology": "Technology",
+    "roadmap": "Roadmap",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© Hera Labs",
+    "tagline": "Built with precision."
+  }
+}
