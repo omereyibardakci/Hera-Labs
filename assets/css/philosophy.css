@@ -1,0 +1,214 @@
+/* ==========================================================================
+   HERA LABS — Philosophy Section
+   Phase 04: Our Philosophy
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Section Layout
+   -------------------------------------------------------------------------- */
+
+.section--about {
+  padding-block: var(--space-10) var(--space-9);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(43, 43, 43, 0.4);
+}
+
+.philosophy__header {
+  max-width: 640px;
+  margin-bottom: var(--space-8);
+}
+
+.philosophy__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.philosophy__title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+  max-width: 16ch;
+}
+
+.philosophy__intro {
+  font-size: clamp(var(--font-size-base), 1.5vw, var(--font-size-lg));
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 52ch;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Values Grid
+   -------------------------------------------------------------------------- */
+
+.philosophy__values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  list-style: none;
+}
+
+.philosophy__values-item {
+  display: flex;
+  min-width: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Value Cards
+   -------------------------------------------------------------------------- */
+
+.philosophy-value {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.philosophy-value:hover {
+  transform: translate3d(0, -2px, 0);
+  border-color: var(--color-accent);
+}
+
+.philosophy-value__accent {
+  display: block;
+  margin-bottom: var(--space-5);
+  opacity: 0.45;
+}
+
+.philosophy-value__accent--line {
+  width: 1px;
+  height: 32px;
+  background-color: var(--color-accent);
+}
+
+.philosophy-value__accent--circle {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+}
+
+.philosophy-value__accent--square {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+}
+
+.philosophy-value__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.philosophy-value__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Scroll Reveal Stagger
+   -------------------------------------------------------------------------- */
+
+.philosophy__eyebrow.motion-reveal {
+  transition-delay: 0ms;
+}
+
+.philosophy__title.motion-reveal {
+  transition-delay: 80ms;
+}
+
+.philosophy__intro.motion-reveal {
+  transition-delay: 160ms;
+}
+
+.philosophy__values-item:nth-child(1) .philosophy-value.motion-reveal {
+  transition-delay: 240ms;
+}
+
+.philosophy__values-item:nth-child(2) .philosophy-value.motion-reveal {
+  transition-delay: 320ms;
+}
+
+.philosophy__values-item:nth-child(3) .philosophy-value.motion-reveal {
+  transition-delay: 400ms;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .philosophy__values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .philosophy__values-item:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .section--about {
+    padding-block: var(--space-9) var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy__header {
+    margin-bottom: var(--space-7);
+  }
+
+  .philosophy__title {
+    max-width: none;
+  }
+
+  .philosophy__values {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .philosophy__values-item:nth-child(3) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .section--about {
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  .philosophy__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .philosophy-value {
+    padding: var(--space-5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .philosophy-value:hover {
+    transform: none;
+  }
+}
