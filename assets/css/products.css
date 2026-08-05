@@ -54,11 +54,17 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-5);
   list-style: none;
+  align-items: stretch;
 }
 
 .products__grid-item {
   display: flex;
   min-width: 0;
+  align-items: stretch;
+}
+
+.products__grid-item > .products-card {
+  flex: 1;
 }
 
 
@@ -74,6 +80,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   min-height: 420px;
   padding: var(--space-6);
   background-color: var(--product-surface);
@@ -97,13 +104,15 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
   gap: var(--space-4);
   margin-bottom: var(--space-6);
 }
 
 .products-card__logo {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
+  display: block;
   flex-shrink: 0;
   object-fit: cover;
   border-radius: var(--radius-md);
@@ -117,6 +126,7 @@
 }
 
 .products-card__badge {
+  margin-top: 0;
   padding: var(--space-1) var(--space-3);
   font-size: 0.6875rem;
   font-weight: var(--font-weight-medium);
@@ -134,9 +144,10 @@
 }
 
 .products-card__body {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  min-height: 0;
   gap: var(--space-3);
   margin-bottom: var(--space-6);
 }
@@ -157,6 +168,7 @@
 }
 
 .products-card__description {
+  flex: 1;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
@@ -166,6 +178,7 @@
 .products-card__footer {
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 0;
   gap: var(--space-3);
   margin-top: auto;
 }
@@ -195,7 +208,6 @@
   --product-accent: var(--brand-esref);
   --product-accent-muted: var(--brand-esref-muted);
   --product-surface: var(--product-surface-esref);
-  padding: var(--space-7) var(--space-6);
 }
 
 .products-card--esref .products-card__body {
@@ -276,6 +288,26 @@ button.store-btn:disabled {
   color: var(--product-accent);
 }
 
+.store-btn__icon:has(> img[src*="apple-icon"]) {
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  -webkit-mask-image: url('../images/apple-icon.png');
+  mask-image: url('../images/apple-icon.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.store-btn__icon:has(> img[src*="apple-icon"]) img {
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+}
+
 
 /* --------------------------------------------------------------------------
    6. Scroll Reveal Stagger (uses existing motion-reveal)
@@ -345,10 +377,6 @@ button.store-btn:disabled {
 
   .products-card {
     min-height: auto;
-  }
-
-  .products-card--esref {
-    padding: var(--space-6);
   }
 }
 
