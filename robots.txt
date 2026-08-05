@@ -1,5 +1,5 @@
-# Hera Labs — https://heralabs.dev/
+# Hera Labs — https://omereyibardakci.github.io/Hera-Labs/
 User-agent: *
 Allow: /
 
-Sitemap: https://heralabs.dev/sitemap.xml
+Sitemap: https://omereyibardakci.github.io/Hera-Labs/sitemap.xml
