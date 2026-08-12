@@ -69,18 +69,6 @@
   margin-bottom: var(--space-5);
 }
 
-.careers__lang-icon img {
-  display: block;
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
-
-[data-theme="light"] .careers__lang-icon img {
-  filter: brightness(0);
-  opacity: 0.55;
-}
-
 .careers__availability {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
