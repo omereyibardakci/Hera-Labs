@@ -19,6 +19,8 @@
   },
   "language": {
     "selection": "Dil seçimi",
+    "switchToTurkish": "Türkçeye geç",
+    "switchToEnglish": "İngilizceye geç",
     "turkish": "Türkçe",
     "english": "İngilizce"
   },
@@ -202,7 +204,7 @@
   "careers": {
     "eyebrow": "KARİYER",
     "title": "Anlamlı işler üret.",
-    "supporting": "Hera Labs büyüyor. Özenli ürünlere, iyi mühendisliğe ve anlamlı detaylara önem veriyoruz.",
+    "supporting": "Merak eden, üreten ve detaylara önem veren insanlarla çalışmak istiyoruz. Hera Labs’te ürün, tasarım ve mühendisliği bir araya getirerek yalnızca yazılım değil, uzun süre değer taşıyacak, özenle geliştirilmiş ürünler üretiyoruz.",
     "availability": "Şu anda aktif bir pozisyonumuz bulunmuyor.",
     "closing": "Ancak bizimle çalışmak istiyorsan, senden haber almaktan memnuniyet duyarız.",
     "cta": "İletişime geç"

@@ -159,11 +159,15 @@
       <div class="header__actions">
 
         <!-- Language Switch -->
-        <div class="lang-switch" role="group" data-i18n-aria-label="language.selection">
-          <button type="button" class="lang-switch__btn" data-lang="tr" aria-pressed="false" data-i18n-aria="language.turkish">TR</button>
-          <span class="lang-switch__divider" aria-hidden="true"></span>
-          <button type="button" class="lang-switch__btn lang-switch__btn--active" data-lang="en" aria-pressed="true" data-i18n-aria="language.english">EN</button>
-        </div>
+        <button type="button" class="lang-switch__toggle" aria-label="Switch to Turkish">
+          <span class="lang-switch__icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="9" r="6.75" stroke="currentColor" stroke-width="1.25"/>
+              <path d="M2.25 9H15.75M9 2.25C7.5 4.5 7.5 13.5 9 15.75M9 2.25C10.5 4.5 10.5 13.5 9 15.75" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="lang-switch__code">EN</span>
+        </button>
 
         <!-- Theme Toggle -->
         <button type="button" class="theme-toggle" data-i18n-aria="theme.toggle" aria-pressed="false">
@@ -678,10 +682,16 @@
           <div class="careers__content">
             <p class="careers__eyebrow motion-reveal" data-i18n="careers.eyebrow">CAREERS</p>
             <h2 class="careers__title motion-reveal" id="careers-heading" data-i18n="careers.title">Build something that matters.</h2>
-            <p class="careers__intro motion-reveal" data-i18n="careers.supporting">Hera Labs is growing. We care about thoughtful products, good engineering, and meaningful details.</p>
+            <p class="careers__intro motion-reveal" data-i18n="careers.supporting">We want to work with people who are curious, driven to build, and attentive to detail. At Hera Labs, we bring product, design, and engineering together to create more than software — thoughtfully crafted products built to last.</p>
           </div>
 
           <div class="careers__aside">
+            <button type="button" class="careers__lang lang-switch__toggle" aria-label="Switch to Turkish">
+              <span class="careers__lang-icon lang-switch__icon" aria-hidden="true">
+                <img src="assets/images/language.svg" alt="" width="18" height="18">
+              </span>
+              <span class="lang-switch__code">EN</span>
+            </button>
             <p class="careers__availability motion-reveal" data-i18n="careers.availability">We are not actively hiring right now.</p>
             <p class="careers__closing motion-reveal" data-i18n="careers.closing">But if you would like to work with us, we would be glad to hear from you.</p>
             <a href="#connect" class="careers__cta motion-reveal" data-i18n="careers.cta">Get in touch</a>

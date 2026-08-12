@@ -148,10 +148,13 @@ function applyTranslations(language) {
  * @param {string} language
  */
 function updateLanguageSwitcher(language) {
-  document.querySelectorAll('[data-lang]').forEach(function (button) {
-    const isActive = button.getAttribute('data-lang') === language;
-    button.classList.toggle('lang-switch__btn--active', isActive);
-    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  document.querySelectorAll('.lang-switch__code').forEach(function (element) {
+    element.textContent = language.toUpperCase();
+  });
+
+  document.querySelectorAll('.lang-switch__toggle').forEach(function (button) {
+    const targetKey = language === 'en' ? 'language.switchToTurkish' : 'language.switchToEnglish';
+    button.setAttribute('aria-label', translate(targetKey, language));
   });
 }
 
@@ -211,9 +214,10 @@ function getLanguageFromPath(pathname) {
  * Bind language switcher controls.
  */
 function bindLanguageSwitcher() {
-  document.querySelectorAll('[data-lang]').forEach(function (button) {
+  document.querySelectorAll('.lang-switch__toggle').forEach(function (button) {
     button.addEventListener('click', function () {
-      setLanguage(button.getAttribute('data-lang'));
+      const nextLanguage = currentLanguage === 'en' ? 'tr' : 'en';
+      setLanguage(nextLanguage);
     });
   });
 }

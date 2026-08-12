@@ -19,6 +19,8 @@
   },
   "language": {
     "selection": "Language selection",
+    "switchToTurkish": "Switch to Turkish",
+    "switchToEnglish": "Switch to English",
     "turkish": "Turkish",
     "english": "English"
   },
@@ -202,7 +204,7 @@
   "careers": {
     "eyebrow": "CAREERS",
     "title": "Build something that matters.",
-    "supporting": "Hera Labs is growing. We care about thoughtful products, good engineering, and meaningful details.",
+    "supporting": "We want to work with people who are curious, driven to build, and attentive to detail. At Hera Labs, we bring product, design, and engineering together to create more than software — thoughtfully crafted products built to last.",
     "availability": "We are not actively hiring right now.",
     "closing": "But if you would like to work with us, we would be glad to hear from you.",
     "cta": "Get in touch"
