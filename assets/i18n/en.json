@@ -12,6 +12,7 @@
     "products": "Products",
     "technology": "Technology",
     "roadmap": "Roadmap",
+    "careers": "Careers",
     "contact": "Contact",
     "logoHome": "Hera Labs — Home",
     "openMenu": "Open menu"
@@ -197,6 +198,14 @@
         "description": "More thoughtfully crafted products are already in development."
       }
     }
+  },
+  "careers": {
+    "eyebrow": "CAREERS",
+    "title": "Build something that matters.",
+    "supporting": "Hera Labs is growing. We care about thoughtful products, good engineering, and meaningful details.",
+    "availability": "We are not actively hiring right now.",
+    "closing": "But if you would like to work with us, we would be glad to hear from you.",
+    "cta": "Get in touch"
   },
   "contact": {
     "sectionLabel": "Contact",

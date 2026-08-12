@@ -12,6 +12,7 @@
     "products": "Ürünler",
     "technology": "Teknoloji",
     "roadmap": "Yol Haritası",
+    "careers": "Kariyer",
     "contact": "İletişim",
     "logoHome": "Hera Labs — Ana Sayfa",
     "openMenu": "Menüyü aç"
@@ -197,6 +198,14 @@
         "description": "Özenle tasarlanmış yeni ürünler halihazırda geliştiriliyor."
       }
     }
+  },
+  "careers": {
+    "eyebrow": "KARİYER",
+    "title": "Anlamlı işler üret.",
+    "supporting": "Hera Labs büyüyor. Özenli ürünlere, iyi mühendisliğe ve anlamlı detaylara önem veriyoruz.",
+    "availability": "Şu anda aktif bir pozisyonumuz bulunmuyor.",
+    "closing": "Ancak bizimle çalışmak istiyorsan, senden haber almaktan memnuniyet duyarız.",
+    "cta": "İletişime geç"
   },
   "contact": {
     "sectionLabel": "İletişim",
