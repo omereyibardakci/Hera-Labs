@@ -238,12 +238,12 @@
       },
       "appStore": {
         "label": "App Store",
-        "value": "Mevcut Değil",
+        "value": "Uygulamalarımızı Gör",
         "aria": "Hera Labs App Store sayfasını aç"
       },
       "googlePlay": {
         "label": "Google Play",
-        "value": "Mevcut ürünler",
+        "value": "Uygulamalarımızı Gör",
         "aria": "Hera Labs Google Play sayfasını aç"
       }
     }
