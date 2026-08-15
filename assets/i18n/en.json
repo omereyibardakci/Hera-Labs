@@ -238,11 +238,13 @@
       },
       "appStore": {
         "label": "App Store",
-        "value": "Not Available"
+        "value": "Not Available",
+        "aria": "Open Hera Labs on the App Store"
       },
       "googlePlay": {
         "label": "Google Play",
-        "value": "Available products"
+        "value": "Available products",
+        "aria": "Open Hera Labs on Google Play"
       }
     }
   },
